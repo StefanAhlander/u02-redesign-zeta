@@ -115,6 +115,7 @@ nav {
     display: inline-block;
     padding: 0.5rem 1rem;
     position: relative;
+    transition: all 0.3s ease;
   }
 
   li,
@@ -124,20 +125,19 @@ nav {
     text-transform: uppercase;
   }
 
-  &>ul>li:focus,
-  &>ul>li:hover,
-  &>ul>li:active {
+  &>ul>li:hover {
     background-color: $baseColor-lighter;
   }
 
   li>ul {
     background-color: $baseColor;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-    display: none;
-    opacity: 0.9;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     top: 2.5rem;
     left: -0.04rem;
+    transition: all 0.3s ease;
     z-index: 1;
   }
 
@@ -150,10 +150,9 @@ nav {
     background-color: $baseColor-lighter;
   }
 
-  li:focus>ul,
-  li:hover>ul,
-  li:active>ul {
-    display: block;
+  li:hover>ul {
+    opacity: 0.95;
+    visibility: visible;
   }
 
   li:last-child:hover>ul {
