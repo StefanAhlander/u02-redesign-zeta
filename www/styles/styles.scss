@@ -11,3 +11,120 @@ $backgroundColor: #f9f8f8;
 $baseColor: #425768;
 $baseColor-lighter: #526b81;
 $textColor: #eee;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $backgroundColor;
+  font-size: 18px;
+  font-family: $baseFont;
+}
+
+.wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+header {
+  img {
+    display: inline-block;
+    margin: 1rem 0;
+    vertical-align: -1.8rem;
+  }
+
+  h1 {
+    display: inline-block;
+    font-family: $MyhHeaderFont;
+    font-size: 1.5rem;
+    text-justify: left;
+  }
+
+  ul {
+    float: right;
+
+    li {
+      border-left: 1px solid $baseColor;
+      display: inline-block;
+      font-size: 1rem;
+      margin-left: 0.5rem;
+      padding-left: 0.5rem;
+    }
+
+    li:first-of-type {
+      border-left: none;
+    }
+  }
+}
+
+nav {
+  background-color: $baseColor;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+
+  & > ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    position: relative;
+  }
+
+  li,
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  & > ul > li:nth-child(1):hover,
+  & > ul > li:nth-child(6):hover,
+  & > ul > li:nth-child(8):hover {
+    background-color: $baseColor-lighter;
+  }
+
+  li > ul {
+    background-color: $baseColor;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    left: -0.04rem;
+    z-index: 1;
+  }
+
+  li > ul > li {
+    border-top: 1px dotted $baseColor-lighter;
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+
+  li > ul > li:hover {
+    background-color: $baseColor-lighter;
+  }
+
+  li:hover > ul {
+    display: block;
+  }
+
+  li:last-child:hover > ul {
+    left: -8rem;
+  }
+}
+
+main {
+  padding-top: 1rem;
+}
+
+#hero-image {
+  img {
+    width: 100%;
+    z-index: -2;
+  }
+}

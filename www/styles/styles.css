@@ -1,1 +1,124 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+@charset "UTF-8";
+/*  Font used on the current website to print "Myndigheten för Yrkeshögskolan". */
+/*  Base font for the website. */
+/*  Color scheme */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f8f8;
+  font-size: 18px;
+  font-family: "Noto Sans", "Verdana", "Arial", sans-serif;
+}
+
+.wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+header img {
+  display: inline-block;
+  margin: 1rem 0;
+  vertical-align: -1.8rem;
+}
+
+header h1 {
+  display: inline-block;
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-size: 1.5rem;
+  text-justify: left;
+}
+
+header ul {
+  float: right;
+}
+
+header ul li {
+  border-left: 1px solid #425768;
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+header ul li:first-of-type {
+  border-left: none;
+}
+
+nav {
+  background-color: #425768;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+nav li,
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav > ul > li:nth-child(1):hover,
+nav > ul > li:nth-child(6):hover,
+nav > ul > li:nth-child(8):hover {
+  background-color: #526b81;
+}
+
+nav li > ul {
+  background-color: #425768;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  left: -0.04rem;
+  z-index: 1;
+}
+
+nav li > ul > li {
+  border-top: 1px dotted #526b81;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+nav li > ul > li:hover {
+  background-color: #526b81;
+}
+
+nav li:hover > ul {
+  display: block;
+}
+
+nav li:last-child:hover > ul {
+  left: -8rem;
+}
+
+main {
+  padding-top: 1rem;
+}
+
+#hero-image img {
+  width: 100%;
+  z-index: -2;
+}
+/*# sourceMappingURL=styles.css.map */
