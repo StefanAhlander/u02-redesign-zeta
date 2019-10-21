@@ -78,9 +78,7 @@ nav a {
   text-transform: uppercase;
 }
 
-nav > ul > li:nth-child(1):hover,
-nav > ul > li:nth-child(6):hover,
-nav > ul > li:nth-child(8):hover {
+nav > ul > li:hover {
   background-color: #526b81;
 }
 
@@ -89,6 +87,7 @@ nav li > ul {
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   display: none;
+  opacity: 0.9;
   position: absolute;
   top: 2.5rem;
   left: -0.04rem;
@@ -96,7 +95,6 @@ nav li > ul {
 }
 
 nav li > ul > li {
-  border-top: 1px dotted #526b81;
   display: block;
   padding: 0.5rem 1rem;
 }
