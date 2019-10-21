@@ -20,6 +20,10 @@ body {
   margin: 0 auto;
 }
 
+header {
+  position: relative;
+}
+
 header img {
   display: inline-block;
   margin: 1rem 0;
@@ -47,6 +51,34 @@ header ul li {
 
 header ul li:first-of-type {
   border-left: none;
+}
+
+header form {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+}
+
+header form input {
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  background-image: url("../images/icon-search.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: right 0.5rem center;
+}
+
+header form button {
+  background-color: #425768;
+  border: 2px solid #425768;
+  color: #eee;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: -0.4rem;
+}
+
+header form button:hover {
+  cursor: pointer;
 }
 
 nav {
@@ -78,7 +110,9 @@ nav a {
   text-transform: uppercase;
 }
 
-nav > ul > li:hover {
+nav > ul > li:focus,
+nav > ul > li:hover,
+nav > ul > li:active {
   background-color: #526b81;
 }
 
@@ -103,7 +137,9 @@ nav li > ul > li:hover {
   background-color: #526b81;
 }
 
-nav li:hover > ul {
+nav li:focus > ul,
+nav li:hover > ul,
+nav li:active > ul {
   display: block;
 }
 
