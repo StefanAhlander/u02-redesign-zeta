@@ -1,7 +1,9 @@
 @charset "UTF-8";
-/*  Font used on the current website to print "Myndigheten för Yrkeshögskolan". */
+/*  Font used on the current website to print "Myndigheten för Yrkeshögskolan".
+    Taget från den befintliga sidan. */
 /*  Base font for the website. */
 /*  Color scheme */
+/*  Reset styles. */
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +15,7 @@ body {
   background-color: #f9f8f8;
   font-size: 16px;
   font-family: "Noto Sans", "Verdana", "Arial", sans-serif;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -138,7 +141,8 @@ nav li > ul {
   z-index: 10;
 }
 
-nav li:hover > ul {
+nav li:hover > ul,
+nav li:focus-within > ul {
   opacity: 0.95;
   visibility: visible;
 }
@@ -159,6 +163,12 @@ nav li > ul > li:first-child {
 
 nav li > ul > li:hover {
   background-color: #526b81;
+}
+
+@media screen and (max-width: 1190px) {
+  nav ul {
+    display: none;
+  }
 }
 
 main.wrapper {
