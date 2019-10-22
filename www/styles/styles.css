@@ -161,7 +161,7 @@ nav li > ul > li:hover {
   background-color: #526b81;
 }
 
-main {
+main.wrapper {
   padding-top: 1rem;
 }
 
