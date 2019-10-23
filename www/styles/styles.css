@@ -98,6 +98,9 @@ header form button:hover {
     right: 0;
     text-align: center;
   }
+  header ul {
+    margin-top: 0;
+  }
 }
 
 nav {
