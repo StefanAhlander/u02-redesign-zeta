@@ -1,1 +1,321 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+@charset "UTF-8";
+/*  Font used on the current website to print "Myndigheten för Yrkeshögskolan".
+    Taget från den befintliga sidan. */
+/*  Base font for the website. */
+/*  Color scheme */
+/*  Reset styles. */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f8f8;
+  font-size: 16px;
+  font-family: "Noto Sans", "Verdana", "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  position: relative;
+}
+
+header img {
+  display: inline-block;
+  margin: 1rem 0;
+  vertical-align: -1.8rem;
+}
+
+header h1 {
+  display: inline-block;
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+header ul {
+  float: right;
+}
+
+header ul li {
+  border-left: 1px solid #425768;
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+header ul li:first-of-type {
+  border-left: none;
+}
+
+header form {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+header form input {
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  background-image: url("../images/icon-search.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: right 0.5rem center;
+}
+
+header form button {
+  background-color: #425768;
+  border: 2px solid #425768;
+  color: #eee;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: -0.4rem;
+}
+
+header form button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  header img,
+  header h1,
+  header ul,
+  header form {
+    display: block;
+    float: none;
+    margin: 1rem auto;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+  }
+  header ul {
+    margin-top: 0;
+  }
+}
+
+nav {
+  background-color: #425768;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  clear: right;
+  font-size: 1rem;
+  position: relative;
+}
+
+nav #hamburger-container,
+nav input,
+nav label {
+  display: none;
+}
+
+nav #main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav li,
+nav p,
+nav label {
+  padding: 0.5rem 1rem;
+}
+
+nav li {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+nav li,
+nav a,
+nav p,
+nav label {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav #main-menu li:first-child {
+  padding-left: 0;
+}
+
+nav #main-menu li:last-child {
+  padding-right: 0;
+}
+
+nav > div > ul > li:hover {
+  background-color: #526b81;
+}
+
+nav li > ul {
+  background-color: #425768;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  top: 2.4rem;
+  left: -0.04rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+nav li > ul > li {
+  height: 0;
+  font-size: 0;
+}
+
+nav li:hover > ul,
+nav li:focus-within > ul {
+  height: auto;
+  opacity: 0.95;
+}
+
+nav li:hover > ul > li,
+nav li:focus-within > ul > li {
+  height: auto;
+  font-size: inherit;
+}
+
+nav li:last-child:hover > ul {
+  left: -7.98rem;
+  width: 11.1rem;
+}
+
+nav li > ul > li {
+  display: block;
+}
+
+nav #main-menu li > ul > li:first-child {
+  padding-left: 1rem;
+}
+
+nav li > ul > li:hover {
+  background-color: #526b81;
+}
+
+@media screen and (max-width: 1205px) {
+  nav #hamburger-container {
+    display: inline-block;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    vertical-align: -0.3rem;
+    z-index: 1;
+  }
+  nav input {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2rem;
+    position: absolute;
+    top: 0.2rem;
+    left: 1rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+  nav label {
+    display: inline-block;
+  }
+  nav #hamburger-container span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #eee;
+    border-radius: 3px;
+    z-index: 1;
+    -webkit-transform-origin: 4px 0px;
+            transform-origin: 4px 0px;
+    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  nav #hamburger-container span:last-child {
+    margin-bottom: 0;
+  }
+  nav #hamburger-container span:first-child {
+    margin-top: 0.5rem;
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  nav #hamburger-container span:last-child {
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  nav #menu-toggle:checked ~ div span {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-4px, -2px);
+            transform: rotate(45deg) translate(-4px, -2px);
+  }
+  nav #menu-toggle:checked ~ div span:nth-child(2) {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+            transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  nav #menu-toggle:checked ~ div span:last-child {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+            transform: rotate(-45deg) translate(0, -1px);
+  }
+  nav #main-menu,
+  nav li {
+    display: block;
+    width: 414px;
+  }
+  nav #main-menu {
+    background-color: #425768;
+    opacity: 0;
+    position: absolute;
+    top: 2.4rem;
+    left: -414px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  nav #main-menu > li {
+    padding: 0.5rem 4rem;
+  }
+  nav #main-menu > li:first-child {
+    margin-top: 1rem;
+    padding-left: 4rem;
+  }
+  nav #main-menu > li:last-child {
+    margin-bottom: 1rem;
+  }
+  nav #menu-toggle:checked ~ #main-menu {
+    opacity: 0.95;
+    -webkit-transform: translateX(414px);
+            transform: translateX(414px);
+  }
+  nav li > ul {
+    display: none;
+  }
+}
+
+main.wrapper {
+  padding-top: 1rem;
+}
+
+#hero-image img {
+  width: 100%;
+  z-index: -2;
+}
+/*# sourceMappingURL=styles.css.map */
