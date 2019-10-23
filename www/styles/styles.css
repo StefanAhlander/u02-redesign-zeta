@@ -38,7 +38,7 @@ header h1 {
   display: inline-block;
   font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-size: 1.4rem;
-  text-justify: left;
+  text-align: left;
 }
 
 header ul {
