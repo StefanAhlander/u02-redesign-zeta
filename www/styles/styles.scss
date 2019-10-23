@@ -338,6 +338,9 @@ main.wrapper {
 }
 
 #hero-image {
+  position: fixed;
+  max-width: 1248px;
+
   img {
     width: 100%;
     z-index: -2;

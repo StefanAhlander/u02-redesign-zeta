@@ -314,6 +314,11 @@ main.wrapper {
   padding-top: 1rem;
 }
 
+#hero-image {
+  position: fixed;
+  max-width: 1248px;
+}
+
 #hero-image img {
   width: 100%;
   z-index: -2;
