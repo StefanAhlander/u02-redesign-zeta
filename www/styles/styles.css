@@ -344,12 +344,12 @@ nav li > ul > li:hover {
     Also set negative z-index to have everything else move on top
     of the image. */
 #hero-image {
-  height: 707px;
-  margin: 3rem auto 1rem;
+  height: 569px;
+  margin: 0 auto 1rem;
   max-width: 1280px;
   position: relative;
-  -webkit-transform: translateZ(-1.5px) translateX(-0.5rem) scale(1.71);
-          transform: translateZ(-1.5px) translateX(-0.5rem) scale(1.71);
+  -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
+          transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
   z-index: -2;
 }
 
@@ -369,7 +369,7 @@ main.wrapper {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: -7rem 0 1rem;
+  margin: -7rem 0 3rem;
 }
 
 #placeholder > div div {
