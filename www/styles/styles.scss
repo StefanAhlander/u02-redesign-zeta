@@ -193,7 +193,7 @@ nav {
     background-color: $baseColor;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     left: -0.04rem;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     top: 2.4rem;
     transform: scale(0);
@@ -202,20 +202,15 @@ nav {
     z-index: 2;
   }
 
-  li>ul>li {
-    transform: scale(0);
-  }
-
   /*  On hover or keyboard-focus expand sub-menu. Doesn't work on IE/Edge 
       and must therefore be seens as an enhancement not a feature. */
-  li:hover>ul,
-  li:focus-within>ul {
+  &>div>ul>li:focus-within>ul {
     opacity: 0.95;
     transform: scale(1);
   }
 
-  li:hover>ul>li,
-  li:focus-within>ul>li {
+  &>div>ul>li:hover>ul {
+    opacity: 0.95;
     transform: scale(1);
   }
 

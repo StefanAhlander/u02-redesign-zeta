@@ -183,7 +183,7 @@ nav li > ul {
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   left: -0.04rem;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 2.4rem;
   -webkit-transform: scale(0);
@@ -195,20 +195,14 @@ nav li > ul {
   z-index: 2;
 }
 
-nav li > ul > li {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-
-nav li:hover > ul,
-nav li:focus-within > ul {
+nav > div > ul > li:focus-within > ul {
   opacity: 0.95;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-nav li:hover > ul > li,
-nav li:focus-within > ul > li {
+nav > div > ul > li:hover > ul {
+  opacity: 0.95;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
