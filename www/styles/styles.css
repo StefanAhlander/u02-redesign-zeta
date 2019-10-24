@@ -15,9 +15,21 @@ body {
   background-color: #f9f8f8;
   font-size: 16px;
   font-family: "Noto Sans", "Verdana", "Arial", sans-serif;
-  overflow-x: hidden;
 }
 
+/*  Container-div needed for parallax effect. Sets perspective for the
+    whole viewport and sets everything in an inner scrolling box. */
+#container {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 2px;
+          perspective: 2px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/*  Helper-class to centralize and set width of conten. */
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -58,18 +70,18 @@ header ul li:first-of-type {
 }
 
 header form {
-  position: absolute;
   bottom: 1rem;
   right: 1rem;
+  position: absolute;
 }
 
 header form input {
   font-size: 1rem;
-  padding: 0.2rem 0.5rem;
   background-image: url("../images/icon-search.svg");
   background-repeat: no-repeat;
   background-size: 1rem;
   background-position: right 0.5rem center;
+  padding: 0.2rem 0.5rem;
 }
 
 header form button {
@@ -90,11 +102,11 @@ header form button:hover {
   header h1,
   header ul,
   header form {
+    bottom: 0;
     display: block;
     float: none;
     margin: 1rem auto;
     position: relative;
-    bottom: 0;
     right: 0;
     text-align: center;
   }
@@ -110,6 +122,10 @@ nav {
   clear: right;
   font-size: 1rem;
   position: relative;
+  /* For larger vieports hide mobile navigation elements. */
+  /*  On hover or keyboard-focus expand sub-menu. Doesn't work on IE/Edge 
+      and must therefore be seens as an enhancement not a feature. */
+  /*  Position last sub-menu so it doesn't appear off screen. */
 }
 
 nav #hamburger-container,
@@ -164,31 +180,35 @@ nav li > ul {
   background-color: #425768;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  height: 0;
+  left: -0.04rem;
   opacity: 0;
   position: absolute;
   top: 2.4rem;
-  left: -0.04rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center 0;
+          transform-origin: center 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  z-index: 3;
+  z-index: 2;
 }
 
 nav li > ul > li {
-  height: 0;
-  font-size: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 nav li:hover > ul,
 nav li:focus-within > ul {
-  height: auto;
   opacity: 0.95;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 nav li:hover > ul > li,
 nav li:focus-within > ul > li {
-  height: auto;
-  font-size: inherit;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 nav li:last-child:hover > ul {
@@ -209,6 +229,16 @@ nav li > ul > li:hover {
 }
 
 @media screen and (max-width: 1205px) {
+  nav {
+    /*  Position a transparent checkbox to accept "clicks" to expand
+        the menu. */
+    /*  Style the "hamburger" and set styles to prepare for tranformation. */
+    /*  On "click", ie checkbox is checked, rotate top and bottom
+        hamburger into an "X" and make the middle one transparent. */
+    /*  Position menu of screen. */
+    /*  Om "click" move menu in from the left. */
+    /*  On mobile hide sub-menu. */
+  }
   nav #hamburger-container {
     display: inline-block;
     position: relative;
@@ -220,35 +250,35 @@ nav li > ul > li:hover {
     z-index: 1;
   }
   nav input {
+    cursor: pointer;
     display: inline-block;
-    width: 2.5rem;
     height: 2rem;
+    left: 1rem;
+    opacity: 0;
     position: absolute;
     top: 0.2rem;
-    left: 1rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
+    width: 2.5rem;
+    z-index: 3;
     -webkit-touch-callout: none;
   }
   nav label {
     display: inline-block;
   }
   nav #hamburger-container span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
     background: #eee;
     border-radius: 3px;
-    z-index: 1;
+    height: 4px;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
     -webkit-transform-origin: 4px 0px;
             transform-origin: 4px 0px;
     -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    width: 33px;
+    z-index: 2;
   }
   nav #hamburger-container span:last-child {
     margin-bottom: 0;
@@ -283,10 +313,10 @@ nav li > ul > li:hover {
   }
   nav #main-menu {
     background-color: #425768;
+    left: -414px;
     opacity: 0;
     position: absolute;
     top: 2.4rem;
-    left: -414px;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
@@ -310,17 +340,48 @@ nav li > ul > li:hover {
   }
 }
 
+/*  Move hero-image back in space and scale it up to normal size. 
+    Also set negative z-index to have everything else move on top
+    of the image. */
+#hero-image {
+  height: 707px;
+  margin: 3rem auto 1rem;
+  max-width: 1280px;
+  position: relative;
+  -webkit-transform: translateZ(-1.5px) translateX(-0.5rem) scale(1.71);
+          transform: translateZ(-1.5px) translateX(-0.5rem) scale(1.71);
+  z-index: -2;
+}
+
+#hero-image picture {
+  width: 100%;
+}
+
 main.wrapper {
   padding-top: 1rem;
 }
 
-#hero-image {
-  position: fixed;
-  max-width: 1248px;
+#placeholder > div {
+  height: 200px;
+  widows: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: -7rem 0 1rem;
 }
 
-#hero-image img {
-  width: 100%;
-  z-index: -2;
+#placeholder > div div {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  border: 3px solid #425768;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #425768;
+  height: 100vh;
 }
 /*# sourceMappingURL=styles.css.map */

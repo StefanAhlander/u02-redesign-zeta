@@ -36,9 +36,19 @@ body {
   background-color: $backgroundColor;
   font-size: 16px;
   font-family: $baseFont;
-  overflow-x: hidden;
 }
 
+/*  Container-div needed for parallax effect. Sets perspective for the
+    whole viewport and sets everything in an inner scrolling box. */
+#container {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+  transform-style: preserve-3d;
+}
+
+/*  Helper-class to centralize and set width of conten. */
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
@@ -78,17 +88,17 @@ header {
   }
 
   form {
-    position: absolute;
     bottom: 1rem;
     right: 1rem;
+    position: absolute;
 
     input {
       font-size: 1rem;
-      padding: 0.2rem 0.5rem;
       background-image: url("../images/icon-search.svg");
       background-repeat: no-repeat;
       background-size: 1rem;
       background-position: right 0.5rem center;
+      padding: 0.2rem 0.5rem;
     }
 
     button {
@@ -111,11 +121,11 @@ header {
     h1,
     ul,
     form {
+      bottom: 0;
       display: block;
       float: none;
       margin: 1rem auto;
       position: relative;
-      bottom: 0;
       right: 0;
       text-align: center;
     }
@@ -133,6 +143,7 @@ nav {
   font-size: 1rem;
   position: relative;
 
+  /* For larger vieports hide mobile navigation elements. */
   #hamburger-container,
   input,
   label {
@@ -180,32 +191,34 @@ nav {
   li>ul {
     background-color: $baseColor;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-    height: 0;
+    left: -0.04rem;
     opacity: 0;
     position: absolute;
     top: 2.4rem;
-    left: -0.04rem;
+    transform: scale(0);
+    transform-origin: center 0;
     transition: all 0.3s ease;
-    z-index: 3;
+    z-index: 2;
   }
 
   li>ul>li {
-    height: 0;
-    font-size: 0;
+    transform: scale(0);
   }
 
+  /*  On hover or keyboard-focus expand sub-menu. Doesn't work on IE/Edge 
+      and must therefore be seens as an enhancement not a feature. */
   li:hover>ul,
   li:focus-within>ul {
-    height: auto;
     opacity: 0.95;
+    transform: scale(1);
   }
 
   li:hover>ul>li,
   li:focus-within>ul>li {
-    height: auto;
-    font-size: inherit;
+    transform: scale(1);
   }
 
+  /*  Position last sub-menu so it doesn't appear off screen. */
   li:last-child:hover>ul {
     left: -7.98rem;
     width: 11.1rem;
@@ -232,16 +245,18 @@ nav {
       z-index: 1;
     }
 
+    /*  Position a transparent checkbox to accept "clicks" to expand
+        the menu. */
     input {
+      cursor: pointer;
       display: inline-block;
-      width: 2.5rem;
       height: 2rem;
+      left: 1rem;
+      opacity: 0;
       position: absolute;
       top: 0.2rem;
-      left: 1rem;
-      cursor: pointer;
-      opacity: 0;
-      z-index: 2;
+      width: 2.5rem;
+      z-index: 3;
       -webkit-touch-callout: none;
     }
 
@@ -249,19 +264,20 @@ nav {
       display: inline-block;
     }
 
+    /*  Style the "hamburger" and set styles to prepare for tranformation. */
     #hamburger-container span {
-      display: block;
-      width: 33px;
-      height: 4px;
-      margin-bottom: 5px;
-      position: relative;
       background: $textColor;
       border-radius: 3px;
-      z-index: 1;
+      height: 4px;
+      display: block;
+      margin-bottom: 5px;
+      position: relative;
       transform-origin: 4px 0px;
       transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         opacity 0.55s ease;
+      width: 33px;
+      z-index: 2;
     }
 
     #hamburger-container span:last-child {
@@ -277,6 +293,8 @@ nav {
       transform-origin: 0% 100%;
     }
 
+    /*  On "click", ie checkbox is checked, rotate top and bottom
+        hamburger into an "X" and make the middle one transparent. */
     #menu-toggle:checked~div span {
       opacity: 1;
       transform: rotate(45deg) translate(-4px, -2px);
@@ -297,12 +315,13 @@ nav {
       width: 414px;
     }
 
+    /*  Position menu of screen. */
     #main-menu {
       background-color: $baseColor;
+      left: -414px;
       opacity: 0;
       position: absolute;
       top: 2.4rem;
-      left: -414px;
       transition: all 0.5s ease-in-out;
     }
 
@@ -319,30 +338,58 @@ nav {
       margin-bottom: 1rem;
     }
 
+    /*  Om "click" move menu in from the left. */
     #menu-toggle:checked~#main-menu {
       opacity: 0.95;
       transform: translateX(414px);
     }
 
+    /*  On mobile hide sub-menu. */
     li>ul {
       display: none;
     }
-
   }
 }
 
+/*  Move hero-image back in space and scale it up to normal size. 
+    Also set negative z-index to have everything else move on top
+    of the image. */
+#hero-image {
+  height: 707px;
+  margin: 3rem auto 1rem;
+  max-width: 1280px;
+  position: relative;
+  transform: translateZ(-1.5px) translateX(-0.5rem) scale(1.71);
+  z-index: -2;
 
+  picture {
+    width: 100%;
+  }
+}
 
 main.wrapper {
   padding-top: 1rem;
 }
 
-#hero-image {
-  position: fixed;
-  max-width: 1248px;
+#placeholder>div {
+  height: 200px;
+  widows: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: -7rem 0 1rem;
 
-  img {
-    width: 100%;
-    z-index: -2;
+  div {
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border: 3px solid $baseColor;
+    border-radius: 5px;
   }
+}
+
+
+
+footer {
+  background-color: $baseColor;
+  height: 100vh;
 }
