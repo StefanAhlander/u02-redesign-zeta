@@ -36,6 +36,7 @@ body {
   background-color: $backgroundColor;
   font-size: 16px;
   font-family: $baseFont;
+  transform: translateZ(0);
 }
 
 /*  Container-div needed for parallax effect. Sets perspective for the
@@ -46,7 +47,6 @@ body {
   overflow-y: auto;
   perspective: 2px;
   transform-style: preserve-3d;
-  transform: translateZ(0);
 }
 
 /*  Helper-class to centralize and set width of conten. */
