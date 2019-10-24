@@ -27,6 +27,8 @@ body {
           perspective: 2px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 /*  Helper-class to centralize and set width of conten. */
@@ -357,6 +359,43 @@ nav li > ul > li:hover {
   width: 100%;
 }
 
+@media screen and (max-width: 828px) {
+  #hero-image {
+    height: 569px;
+    margin: 0 auto 6rem;
+    width: 100%;
+    -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-1rem) translateY(-1.5rem);
+            transform: translateZ(-1.5px) scale(1.6) translateX(-1rem) translateY(-1.5rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #hero-image {
+    height: 569px;
+    margin: 0 auto 6rem;
+    -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(-1.5rem);
+            transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(-1.5rem);
+  }
+}
+
+@media screen and (max-width: 704px) {
+  #hero-image {
+    height: 569px;
+    margin: 0 auto 6rem;
+    -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(3rem);
+            transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(3rem);
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #hero-image {
+    height: 569px;
+    margin: 0 auto -10rem;
+    -webkit-transform: translateZ(-1.5px) scale(1) translateX(-10rem) translateY(-1.5rem);
+            transform: translateZ(-1.5px) scale(1) translateX(-10rem) translateY(-1.5rem);
+  }
+}
+
 main.wrapper {
   padding-top: 1rem;
 }
@@ -369,7 +408,7 @@ main.wrapper {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: -7rem 0 3rem;
+  margin: 0 0 3rem;
 }
 
 #placeholder > div div {

@@ -46,6 +46,7 @@ body {
   overflow-y: auto;
   perspective: 2px;
   transform-style: preserve-3d;
+  transform: translateZ(0);
 }
 
 /*  Helper-class to centralize and set width of conten. */
@@ -365,6 +366,36 @@ nav {
   picture {
     width: 100%;
   }
+
+  @media screen and (max-width: 828px) {
+    height: 569px;
+    margin: 0 auto 6rem;
+    width: 100%;
+    transform: translateZ(-1.5px) scale(1.6) translateX(-1rem) translateY(-1.5rem);
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 569px;
+    margin: 0 auto 6rem;
+    transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(-1.5rem);
+  }
+
+  @media screen and (max-width: 704px) {
+    height: 569px;
+    margin: 0 auto 6rem;
+    transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(3rem);
+  }
+
+  @media screen and (max-width: 414px) {
+    height: 569px;
+    margin: 0 auto -10rem;
+    transform: translateZ(-1.5px) scale(1) translateX(-10rem) translateY(-1.5rem);
+  }
+
+
+
+
+
 }
 
 main.wrapper {
@@ -376,7 +407,7 @@ main.wrapper {
   widows: 100%;
   display: flex;
   justify-content: space-around;
-  margin: -7rem 0 3rem;
+  margin: 0 0 3rem;
 
   div {
     height: 200px;
