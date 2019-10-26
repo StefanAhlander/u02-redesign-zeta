@@ -15,6 +15,8 @@ body {
   background-color: #f9f8f8;
   font-size: 16px;
   font-family: "Noto Sans", "Verdana", "Arial", sans-serif;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 /*  Container-div needed for parallax effect. Sets perspective for the
@@ -27,8 +29,6 @@ body {
           perspective: 2px;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
 }
 
 /*  Helper-class to centralize and set width of conten. */
@@ -125,6 +125,7 @@ nav {
   font-size: 1rem;
   position: relative;
   /* For larger vieports hide mobile navigation elements. */
+  /*  On Edge remove submenues because they don't show up when navigation through them. */
   /*  On hover or keyboard-focus expand sub-menu. Doesn't work on IE/Edge 
       and must therefore be seens as an enhancement not a feature. */
   /*  Position last sub-menu so it doesn't appear off screen. */
@@ -193,6 +194,12 @@ nav li > ul {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 2;
+}
+
+@supports (-ms-ime-align: auto) {
+  nav > div > ul > li > ul {
+    display: none;
+  }
 }
 
 nav > div > ul > li:focus-within > ul {
@@ -402,7 +409,7 @@ main.wrapper {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin: 0 0 3rem;
+  margin: -5rem 0 3rem;
 }
 
 #placeholder > div div {
