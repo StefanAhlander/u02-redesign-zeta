@@ -470,4 +470,72 @@ footer {
   background-color: #425768;
   height: 100vh;
 }
+
+/*  Nyhetsrum styles */
+/**
+ * Tabs
+ */
+#tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#tabs label {
+  background: #526b81;
+  color: #eee;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  -webkit-transition: background ease 0.2s;
+  transition: background ease 0.2s;
+}
+
+#tabs .tab {
+  background: #f9f8f8;
+  display: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-ordinal-group: 100;
+      -ms-flex-order: 99;
+          order: 99;
+  padding: 1rem;
+  width: 100%;
+}
+
+#tabs input[type="radio"] {
+  display: none;
+}
+
+#tabs input[type="radio"]:checked + label {
+  background: #f9f8f8;
+  color: #425768;
+}
+
+#tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  #tabs .tab,
+  #tabs label {
+    -webkit-box-ordinal-group: initial;
+        -ms-flex-order: initial;
+            order: initial;
+  }
+  #tabs label {
+    border-bottom: 2px solid #425768;
+    margin-right: 0;
+    margin-top: 0.2rem;
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

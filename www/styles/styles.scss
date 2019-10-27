@@ -460,3 +460,61 @@ footer {
   background-color: $baseColor;
   height: 100vh;
 }
+
+/*  Nyhetsrum styles */
+/**
+ * Tabs
+ */
+#tabs {
+  display: flex;
+  flex-wrap: wrap; // make sure it wraps
+}
+
+#tabs label {
+  background: $baseColor-lighter;
+  color: $textColor;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  order: 1; // Put the labels first
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  transition: background ease 0.2s;
+}
+
+#tabs .tab {
+  background: $backgroundColor;
+  display: none;
+  flex-grow: 1;
+  order: 99; // Put the tabs last
+  padding: 1rem;
+  width: 100%;
+}
+
+#tabs input[type="radio"] {
+  display: none;
+}
+
+#tabs input[type="radio"]:checked+label {
+  background: $backgroundColor;
+  color: $baseColor;
+}
+
+#tabs input[type="radio"]:checked+label+.tab {
+  display: block;
+}
+
+@media (max-width: 600px) {
+
+  #tabs .tab,
+  #tabs label {
+    order: initial;
+  }
+
+  #tabs label {
+    border-bottom: 2px solid $baseColor;
+    margin-right: 0;
+    margin-top: 0.2rem;
+    width: 100%;
+  }
+}
