@@ -397,6 +397,52 @@ nav li > ul > li:hover {
   }
 }
 
+/*  On Edge Fix background image to avoid jittering on scroll. */
+@supports (-ms-ime-align: auto) {
+  #hero-image {
+    height: 569px;
+    margin: 2rem auto 0;
+    max-width: 1248px;
+    position: relative;
+    -webkit-transform: none;
+            transform: none;
+    z-index: -2;
+  }
+  #hero-image picture,
+  #hero-image img {
+    width: 100%;
+  }
+  @media screen and (max-width: 828px) {
+    #hero-image {
+      margin: 0 auto 1rem;
+      width: 100%;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #hero-image {
+      margin: 0 auto 1rem;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
+  @media screen and (max-width: 704px) {
+    #hero-image {
+      margin: 0 auto 1rem;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
+  @media screen and (max-width: 414px) {
+    #hero-image {
+      margin: 0 auto 1rem;
+      -webkit-transform: none;
+              transform: none;
+    }
+  }
+}
+
 main.wrapper {
   padding-top: 1rem;
 }

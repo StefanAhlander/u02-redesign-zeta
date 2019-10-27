@@ -397,6 +397,45 @@ nav {
   }
 }
 
+/*  On Edge Fix background image to avoid jittering on scroll. */
+@supports (-ms-ime-align:auto) {
+
+  #hero-image {
+    height: 569px;
+    margin: 2rem auto 0;
+    max-width: 1248px;
+    position: relative;
+    transform: none;
+    z-index: -2;
+
+    picture,
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 828px) {
+      margin: 0 auto 1rem;
+      width: 100%;
+      transform: none;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin: 0 auto 1rem;
+      transform: none;
+    }
+
+    @media screen and (max-width: 704px) {
+      margin: 0 auto 1rem;
+      transform: none;
+    }
+
+    @media screen and (max-width: 414px) {
+      margin: 0 auto 1rem;
+      transform: none;
+    }
+  }
+}
+
 main.wrapper {
   padding-top: 1rem;
 }
