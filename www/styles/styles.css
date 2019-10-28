@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*  Font used on the current website to print "Myndigheten för Yrkeshögskolan".
     Taget från den befintliga sidan. */
 /*  Base font for the website. */
@@ -8,7 +9,7 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
   font-size: 16px;
   font-family: "Noto Sans", "Verdana", "Arial", sans-serif;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /*  Container-div needed for parallax effect. Sets perspective for the
@@ -26,9 +27,9 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-perspective: 2px;
-          perspective: 2px;
+  perspective: 2px;
   -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 /*  Helper-class to centralize and set width of conten. */
@@ -100,6 +101,7 @@ header form button:hover {
 }
 
 @media screen and (max-width: 700px) {
+
   header img,
   header h1,
   header ul,
@@ -112,6 +114,7 @@ header form button:hover {
     right: 0;
     text-align: center;
   }
+
   header ul {
     margin-top: 0;
   }
@@ -120,7 +123,7 @@ header form button:hover {
 nav {
   background-color: #425768;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   clear: right;
   font-size: 1rem;
   position: relative;
@@ -142,8 +145,8 @@ nav #main-menu {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 nav li,
@@ -175,83 +178,83 @@ nav #main-menu li:last-child {
   padding-right: 0;
 }
 
-nav > div > ul > li:hover {
+nav>div>ul>li:hover {
   background-color: #526b81;
 }
 
-nav li > ul {
+nav li>ul {
   background-color: #425768;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   left: -0.04rem;
   opacity: 1;
   position: absolute;
   top: 2.4rem;
   -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   -webkit-transform-origin: center 0;
-          transform-origin: center 0;
+  transform-origin: center 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 2;
 }
 
 @supports (-ms-ime-align: auto) {
-  nav > div > ul > li > ul {
+  nav>div>ul>li>ul {
     display: none;
   }
 }
 
-nav > div > ul > li:focus-within > ul {
+nav>div>ul>li:focus-within>ul {
   opacity: 0.95;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
-nav > div > ul > li:hover > ul {
+nav>div>ul>li:hover>ul {
   opacity: 0.95;
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
-nav li:last-child:hover > ul {
+nav li:last-child:hover>ul {
   left: -7.98rem;
   width: 11.1rem;
 }
 
-nav li > ul > li {
+nav li>ul>li {
   display: block;
 }
 
-nav #main-menu li > ul > li:first-child {
+nav #main-menu li>ul>li:first-child {
   padding-left: 1rem;
 }
 
-nav li > ul > li:hover {
+nav li>ul>li:hover {
   background-color: #526b81;
 }
 
 @media screen and (max-width: 1205px) {
-  nav {
-    /*  Position a transparent checkbox to accept "clicks" to expand
+
+  /*  Position a transparent checkbox to accept "clicks" to expand
         the menu. */
-    /*  Style the "hamburger" and set styles to prepare for tranformation. */
-    /*  On "click", ie checkbox is checked, rotate top and bottom
+  /*  Style the "hamburger" and set styles to prepare for tranformation. */
+  /*  On "click", ie checkbox is checked, rotate top and bottom
         hamburger into an "X" and make the middle one transparent. */
-    /*  Position menu of screen. */
-    /*  Om "click" move menu in from the left. */
-    /*  On mobile hide sub-menu. */
-  }
+  /*  Position menu of screen. */
+  /*  Om "click" move menu in from the left. */
+  /*  On mobile hide sub-menu. */
   nav #hamburger-container {
     display: inline-block;
     position: relative;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     vertical-align: -0.3rem;
     z-index: 1;
   }
+
   nav input {
     cursor: pointer;
     display: inline-block;
@@ -264,9 +267,11 @@ nav li > ul > li:hover {
     z-index: 3;
     -webkit-touch-callout: none;
   }
+
   nav label {
     display: inline-block;
   }
+
   nav #hamburger-container span {
     background: #eee;
     border-radius: 3px;
@@ -275,7 +280,7 @@ nav li > ul > li:hover {
     margin-bottom: 5px;
     position: relative;
     -webkit-transform-origin: 4px 0px;
-            transform-origin: 4px 0px;
+    transform-origin: 4px 0px;
     -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -283,37 +288,45 @@ nav li > ul > li:hover {
     width: 33px;
     z-index: 2;
   }
+
   nav #hamburger-container span:last-child {
     margin-bottom: 0;
   }
+
   nav #hamburger-container span:first-child {
     margin-top: 0.5rem;
     -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
   }
+
   nav #hamburger-container span:last-child {
     -webkit-transform-origin: 0% 100%;
-            transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
   }
-  nav #menu-toggle:checked ~ div span {
+
+  nav #menu-toggle:checked~div span {
     opacity: 1;
     -webkit-transform: rotate(45deg) translate(-4px, -2px);
-            transform: rotate(45deg) translate(-4px, -2px);
+    transform: rotate(45deg) translate(-4px, -2px);
   }
-  nav #menu-toggle:checked ~ div span:nth-child(2) {
+
+  nav #menu-toggle:checked~div span:nth-child(2) {
     opacity: 0;
     -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-            transform: rotate(0deg) scale(0.2, 0.2);
+    transform: rotate(0deg) scale(0.2, 0.2);
   }
-  nav #menu-toggle:checked ~ div span:last-child {
+
+  nav #menu-toggle:checked~div span:last-child {
     -webkit-transform: rotate(-45deg) translate(0, -1px);
-            transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(0, -1px);
   }
+
   nav #main-menu,
   nav li {
     display: block;
     width: 414px;
   }
+
   nav #main-menu {
     background-color: #425768;
     left: -414px;
@@ -323,22 +336,27 @@ nav li > ul > li:hover {
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }
-  nav #main-menu > li {
+
+  nav #main-menu>li {
     padding: 0.5rem 4rem;
   }
-  nav #main-menu > li:first-child {
+
+  nav #main-menu>li:first-child {
     margin-top: 1rem;
     padding-left: 4rem;
   }
-  nav #main-menu > li:last-child {
+
+  nav #main-menu>li:last-child {
     margin-bottom: 1rem;
   }
-  nav #menu-toggle:checked ~ #main-menu {
+
+  nav #menu-toggle:checked~#main-menu {
     opacity: 0.95;
     -webkit-transform: translateX(414px);
-            transform: translateX(414px);
+    transform: translateX(414px);
   }
-  nav li > ul {
+
+  nav li>ul {
     display: none;
   }
 }
@@ -352,7 +370,7 @@ nav li > ul > li:hover {
   max-width: 1280px;
   position: relative;
   -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
-          transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
+  transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
   z-index: -2;
 }
 
@@ -366,7 +384,7 @@ nav li > ul > li:hover {
     margin: 0 auto 6rem;
     width: 100%;
     -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-1rem) translateY(-1.5rem);
-            transform: translateZ(-1.5px) scale(1.6) translateX(-1rem) translateY(-1.5rem);
+    transform: translateZ(-1.5px) scale(1.6) translateX(-1rem) translateY(-1.5rem);
   }
 }
 
@@ -375,7 +393,7 @@ nav li > ul > li:hover {
     height: 569px;
     margin: 0 auto 6rem;
     -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(-1.5rem);
-            transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(-1.5rem);
+    transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(-1.5rem);
   }
 }
 
@@ -384,7 +402,7 @@ nav li > ul > li:hover {
     height: 569px;
     margin: 0 auto 6rem;
     -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(3rem);
-            transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(3rem);
+    transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(3rem);
   }
 }
 
@@ -393,7 +411,7 @@ nav li > ul > li:hover {
     height: 569px;
     margin: 0 auto -10rem;
     -webkit-transform: translateZ(-1.5px) scale(1) translateX(-10rem) translateY(-1.5rem);
-            transform: translateZ(-1.5px) scale(1) translateX(-10rem) translateY(-1.5rem);
+    transform: translateZ(-1.5px) scale(1) translateX(-10rem) translateY(-1.5rem);
   }
 }
 
@@ -405,40 +423,45 @@ nav li > ul > li:hover {
     max-width: 1248px;
     position: relative;
     -webkit-transform: none;
-            transform: none;
+    transform: none;
     z-index: -2;
   }
+
   #hero-image picture,
   #hero-image img {
     width: 100%;
   }
+
   @media screen and (max-width: 828px) {
     #hero-image {
       margin: 0 auto 1rem;
       width: 100%;
       -webkit-transform: none;
-              transform: none;
+      transform: none;
     }
   }
+
   @media screen and (max-width: 768px) {
     #hero-image {
       margin: 0 auto 1rem;
       -webkit-transform: none;
-              transform: none;
+      transform: none;
     }
   }
+
   @media screen and (max-width: 704px) {
     #hero-image {
       margin: 0 auto 1rem;
       -webkit-transform: none;
-              transform: none;
+      transform: none;
     }
   }
+
   @media screen and (max-width: 414px) {
     #hero-image {
       margin: 0 auto 1rem;
       -webkit-transform: none;
-              transform: none;
+      transform: none;
     }
   }
 }
@@ -447,18 +470,18 @@ main.wrapper {
   padding-top: 1rem;
 }
 
-#placeholder > div {
+#placeholder>div {
   height: 200px;
   widows: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin: -5rem 0 3rem;
 }
 
-#placeholder > div div {
+#placeholder>div div {
   height: 200px;
   width: 200px;
   background-color: white;
@@ -474,14 +497,14 @@ main.wrapper {
   text-align: center;
   padding: 0.5rem;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   border-radius: 1rem;
 }
 
-.aktuellt > h2 {
+.aktuellt>h2 {
   display: block;
   margin: 20px auto;
   font-size: 40px;
@@ -493,15 +516,15 @@ main.wrapper {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-color: white;
   width: 45%;
   border-radius: 1rem;
   margin-bottom: 2rem;
   padding: 0.5rem;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
   /*box-shadow: 5px 5px 5px 5px #cfcfcf;*/
 }
 
@@ -514,7 +537,7 @@ main.wrapper {
   text-decoration: none;
 }
 
-.aktuellt-card div > hr {
+.aktuellt-card div>hr {
   width: 75%;
   margin: 15px auto;
 }
@@ -530,27 +553,31 @@ a:visited {
 }
 
 @media screen and (max-width: 1024px) {
+
   /*** AKTUELLT ***/
   .aktuellt {
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-wrap: nowrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
+
   .aktuellt-card {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 1.5rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
-  .aktuellt-card > div {
+
+  .aktuellt-card>div {
     width: 50%;
   }
+
   /*** AKTUELLT ***/
 }
 
@@ -566,9 +593,10 @@ a:visited {
     width: 90%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
+
   .aktuellt-card div {
     width: 100%;
   }
@@ -579,4 +607,5 @@ footer {
   background-color: #425768;
   height: 100vh;
 }
+
 /*# sourceMappingURL=styles.css.map */
