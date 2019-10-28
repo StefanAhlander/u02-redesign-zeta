@@ -471,3 +471,95 @@ footer {
   height: 100vh;
 }
 /*# sourceMappingURL=styles.css.map */
+
+.aktuellt {
+
+  width: 100%;
+  display: flex;
+  text-align: center;
+  padding: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 1rem;  
+}
+
+.aktuellt > h2 {
+  display: block;
+  margin: 20px auto;
+  font-size: 40px;
+}
+
+.aktuellt-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 45%;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  /*box-shadow: 5px 5px 5px 5px #cfcfcf;*/
+}
+
+.aktuellt-card img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.aktuellt-card a {
+  text-decoration: none;
+}
+
+.aktuellt-card div > hr {
+  width: 75%;
+  margin: 15px auto;
+}
+
+.aktuellt-card a:hover,a:visited { 
+  color:#000;
+  text-decoration: none;
+}
+
+.aktuellt-card div:nth-child(2) {
+  margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+
+   /*** AKTUELLT ***/
+   .aktuellt {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .aktuellt-card {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    flex-direction: row;
+  }
+
+  .aktuellt-card > div {
+    width: 50%;
+  }
+  /*** AKTUELLT ***/
+}
+
+/*** AKTUELLT ***/
+@media screen and (max-width: 850px) {
+  .aktuellt-card {
+    width: 100%
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .aktuellt-card {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .aktuellt-card div {
+    width: 100%;
+  }
+}
+/*** AKTUELLT ***/ 
