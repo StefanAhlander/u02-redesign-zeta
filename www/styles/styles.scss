@@ -57,16 +57,29 @@ body {
 }
 
 main.two-column-display {
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   &>aside {
-    flex: 0 0 300px;
+    flex: 0 0 17rem;
+    margin-right: 3rem;
+    max-width: 638px;
   }
 
   &>section {
-    flex: 0 1 auto;
+    flex: 0 1 100%;
+    max-width: 40rem;
+  }
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+
+    &>aside {
+      margin: -2rem 0 0;
+      width: 100%;
+    }
   }
 }
 
@@ -332,6 +345,7 @@ nav {
     li {
       display: block;
       width: 414px;
+      z-index: 3;
     }
 
     /*  Position menu of screen. */
@@ -470,7 +484,7 @@ main.wrapper {
   }
 }
 
-
+/*** AKTUELLT ***/
 .aktuellt {
 
   width: 100%;
@@ -543,7 +557,6 @@ a:visited {
     width: 50%;
   }
 
-  /*** AKTUELLT ***/
 }
 
 /*** AKTUELLT ***/
@@ -564,20 +577,17 @@ a:visited {
   }
 }
 
-/*** AKTUELLT ***/
+/*** AKTUELLT END ***/
 
 footer {
   background-color: $baseColor;
   height: 100vh;
 }
 
-/*  Nyhetsrum styles */
-/**
- * Tabs
- */
+/***  NYHETSRUM ***/
 #tabs {
   display: flex;
-  flex-wrap: wrap; // make sure it wraps
+  flex-wrap: wrap;
 }
 
 #tabs label {
@@ -586,9 +596,10 @@ footer {
   cursor: pointer;
   display: block;
   font-weight: bold;
-  order: 1; // Put the labels first
+  order: 1;
   padding: 1rem 2rem;
   margin-right: 0.2rem;
+  text-transform: uppercase;
   transition: background ease 0.2s;
 }
 
@@ -596,7 +607,7 @@ footer {
   background: $backgroundColor;
   display: none;
   flex-grow: 1;
-  order: 99; // Put the tabs last
+  order: 2;
   padding: 1rem;
   width: 100%;
 }
@@ -607,6 +618,9 @@ footer {
 
 #tabs input[type="radio"]:checked+label {
   background: $backgroundColor;
+  border-left: 2px solid $baseColor;
+  border-top: 2px solid $baseColor;
+  border-right: 2px solid $baseColor;
   color: $baseColor;
 }
 
@@ -614,7 +628,7 @@ footer {
   display: block;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 
   #tabs .tab,
   #tabs label {
@@ -628,3 +642,58 @@ footer {
     width: 100%;
   }
 }
+
+/***  NYHETSRUM END ***/
+
+/*** ASIDE ***/
+aside {
+
+  &>nav {
+    background-color: $textColor;
+    border: 1px solid $baseColor;
+    margin-bottom: 3rem;
+    z-index: 1;
+
+    h3 {
+      background: $baseColor;
+      color: $textColor;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: 1rem 0 1rem 2rem;
+      text-transform: uppercase;
+    }
+
+    ul {
+      background-color: white;
+    }
+
+    li {
+      border-bottom: 1px solid $baseColor;
+      padding: 0.5rem 0 0.5rem 2rem;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    li:last-child {
+      border: none;
+    }
+
+    a {
+      color: $baseColor;
+      text-decoration: none;
+      text-transform: none;
+    }
+
+    li:hover {
+      background-color: $baseColor-lighter;
+    }
+
+    li:hover a {
+      color: white;
+    }
+  }
+}
+
+
+
+/*** ASIDE END ***/
