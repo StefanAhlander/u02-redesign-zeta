@@ -38,6 +38,10 @@ body {
   padding: 0 1rem;
 }
 
+header.wrapper {
+  margin-top: 0;
+}
+
 main.two-column-display {
   -webkit-box-align: start;
       -ms-flex-align: start;
