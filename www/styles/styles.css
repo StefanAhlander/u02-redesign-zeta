@@ -86,6 +86,9 @@ main.two-column-display > section {
             flex-direction: column;
   }
   main.two-column-display > aside {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
     margin: -2rem 0 0;
     width: 100%;
   }

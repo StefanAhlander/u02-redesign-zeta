@@ -96,6 +96,7 @@ main.two-column-display {
     flex-direction: column;
 
     &>aside {
+      flex: 0 0 auto;
       margin: -2rem 0 0;
       width: 100%;
     }
