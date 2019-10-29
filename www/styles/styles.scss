@@ -25,6 +25,10 @@ $baseColor-lighter: #526b81;
 $textColor: #eee;
 $beigeColor: #F0E6E6;
 
+/*  Font sizes */
+$headingSizeMainPageheading: 1.5rem;
+
+
 /*  Reset styles. */
 * {
   padding: 0;
@@ -589,6 +593,14 @@ footer {
 }
 
 /***  NYHETSRUM ***/
+h2 {
+  font-size: $headingSizeMainPageheading;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
 #tabs {
   display: flex;
   flex-wrap: wrap;
@@ -612,7 +624,7 @@ footer {
   display: none;
   flex-grow: 1;
   order: 2;
-  padding: 1rem;
+  padding: 1rem 0;
   width: 100%;
 }
 
@@ -644,6 +656,19 @@ footer {
     margin-right: 0;
     margin-top: 0.2rem;
     width: 100%;
+  }
+}
+
+#nyhetsrum div.aktuellt {
+  padding: 0;
+}
+
+#nyhetsrum .aktuellt-card {
+  margin: 1rem auto;
+  width: 100%;
+
+  a {
+    color: #0000ee;
   }
 }
 

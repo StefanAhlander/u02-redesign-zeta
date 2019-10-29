@@ -3,6 +3,7 @@
     Taget från den befintliga sidan. */
 /*  Base font for the website. */
 /*  Color scheme */
+/*  Font sizes */
 /*  Reset styles. */
 * {
   padding: 0;
@@ -630,6 +631,14 @@ footer {
 }
 
 /***  NYHETSRUM ***/
+h2 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
 #tabs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -663,7 +672,7 @@ footer {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  padding: 1rem;
+  padding: 1rem 0;
   width: 100%;
 }
 
@@ -696,6 +705,19 @@ footer {
     margin-top: 0.2rem;
     width: 100%;
   }
+}
+
+#nyhetsrum div.aktuellt {
+  padding: 0;
+}
+
+#nyhetsrum .aktuellt-card {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+#nyhetsrum .aktuellt-card a {
+  color: #0000ee;
 }
 
 /***  NYHETSRUM END ***/
