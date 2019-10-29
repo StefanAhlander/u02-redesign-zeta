@@ -25,6 +25,16 @@ $baseColor-lighter: #526b81;
 $textColor: #eee;
 $beigeColor: #F0E6E6;
 
+/*  Font sizes */
+$headingSizeMainPageheading: 1.5rem;
+
+
+/*  Paddings and margins */
+$topAndBottomPaddingSmallTextbox: 0.5rem;
+$verticalMarginBetweenElms: 3rem;
+$arrowMarginRight: 1rem;
+
+
 /*  Reset styles. */
 * {
   padding: 0;
@@ -52,8 +62,42 @@ body {
 /*  Helper-class to centralize and set width of conten. */
 .wrapper {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: $verticalMarginBetweenElms auto;
   padding: 0 1rem;
+}
+
+header.wrapper,
+nav>div.wrapper {
+  margin: 0 auto;
+}
+
+
+main.two-column-display {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &>aside {
+    flex: 0 0 20rem;
+    margin-left: 3rem;
+    margin-right: 4rem;
+    max-width: 638px;
+  }
+
+  &>section {
+    flex: 0 1 100%;
+    max-width: 40rem;
+  }
+
+  @media screen and (max-width: 1010px) {
+    flex-direction: column;
+
+    &>aside {
+      margin: -2rem 0 0;
+      width: 100%;
+    }
+  }
 }
 
 header {
@@ -159,7 +203,7 @@ nav {
   li,
   p,
   label {
-    padding: 0.5rem 1rem;
+    padding: $topAndBottomPaddingSmallTextbox 1rem;
   }
 
   li {
@@ -318,6 +362,7 @@ nav {
     li {
       display: block;
       width: 414px;
+      z-index: 3;
     }
 
     /*  Position menu of screen. */
@@ -331,7 +376,7 @@ nav {
     }
 
     #main-menu>li {
-      padding: 0.5rem 4rem;
+      padding: $topAndBottomPaddingSmallTextbox 4rem;
     }
 
     #main-menu>li:first-child {
@@ -445,7 +490,7 @@ main.wrapper {
   widows: 100%;
   display: flex;
   justify-content: space-around;
-  margin: -5rem 0 3rem;
+  margin: -5rem 0 $verticalMarginBetweenElms;
 
   div {
     height: 200px;
@@ -456,7 +501,7 @@ main.wrapper {
   }
 }
 
-
+/*** AKTUELLT ***/
 .aktuellt {
 
   width: 100%;
@@ -529,7 +574,6 @@ a:visited {
     width: 50%;
   }
 
-  /*** AKTUELLT ***/
 }
 
 /*** AKTUELLT ***/
@@ -550,9 +594,152 @@ a:visited {
   }
 }
 
-/*** AKTUELLT ***/
+/*** AKTUELLT END ***/
 
 footer {
   background-color: $baseColor;
   height: 100vh;
 }
+
+/***  NYHETSRUM ***/
+h2 {
+  font-size: $headingSizeMainPageheading;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+#tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#tabs label {
+  background: $baseColor-lighter;
+  color: $textColor;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  order: 1;
+  padding: $topAndBottomPaddingSmallTextbox 2rem;
+  margin-right: 0.2rem;
+  text-transform: uppercase;
+  transition: background ease 0.2s;
+}
+
+#tabs .tab {
+  background: $backgroundColor;
+  display: none;
+  flex-grow: 1;
+  order: 2;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+#tabs input[type="radio"] {
+  display: none;
+}
+
+#tabs input[type="radio"]:checked+label {
+  background: $backgroundColor;
+  border-left: 2px solid $baseColor;
+  border-top: 2px solid $baseColor;
+  border-right: 2px solid $baseColor;
+  color: $baseColor;
+}
+
+#tabs input[type="radio"]:checked+label+.tab {
+  display: block;
+}
+
+@media (max-width: 900px) {
+
+  #tabs .tab,
+  #tabs label {
+    order: initial;
+  }
+
+  #tabs label {
+    border-bottom: 2px solid $baseColor;
+    margin-right: 0;
+    margin-top: 0.2rem;
+    width: 100%;
+  }
+}
+
+#nyhetsrum div.aktuellt {
+  padding: 0;
+}
+
+#nyhetsrum .aktuellt-card {
+  margin: 1rem auto;
+  width: 100%;
+
+  a {
+    color: #0000ee;
+  }
+}
+
+/***  NYHETSRUM END ***/
+
+/*** ASIDE ***/
+aside {
+
+  &>nav {
+    background-color: $textColor;
+    border: 1px solid $baseColor;
+    margin-bottom: $verticalMarginBetweenElms;
+    z-index: 1;
+
+    h3 {
+      background: $baseColor;
+      color: $textColor;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: $topAndBottomPaddingSmallTextbox 0 $topAndBottomPaddingSmallTextbox 2rem;
+      text-transform: uppercase;
+    }
+
+    ul {
+      background-color: white;
+    }
+
+    li {
+      border-bottom: 1px solid $baseColor;
+      padding: $topAndBottomPaddingSmallTextbox 0 $topAndBottomPaddingSmallTextbox 2rem;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    li:last-child {
+      border: none;
+    }
+
+    a {
+      color: $baseColor;
+      text-decoration: none;
+      text-transform: none;
+    }
+
+    li>a::after {
+      content: "";
+      float: right;
+      height: 1rem;
+      width: 1rem;
+      background-image: url(../images/icon-arrow-right.svg);
+      background-size: cover;
+      margin-right: $arrowMarginRight;
+    }
+
+    li:hover {
+      background-color: $baseColor-lighter;
+    }
+
+    li:hover a {
+      color: white;
+    }
+  }
+}
+
+/*** ASIDE END ***/
