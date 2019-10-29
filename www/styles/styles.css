@@ -39,8 +39,9 @@ body {
   padding: 0 1rem;
 }
 
-header.wrapper {
-  margin-top: 0;
+header.wrapper,
+nav > div.wrapper {
+  margin: 0 auto;
 }
 
 main.two-column-display {
