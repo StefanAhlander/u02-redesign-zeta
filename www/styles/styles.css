@@ -479,7 +479,8 @@ main.wrapper {
   border-radius: 0.8rem;
   margin: 0.5rem;
   box-shadow: 0 0.4rem 0.8rem 0 rgba(168, 106, 106, 0.2);
-  padding: 0rem 0rem 0.2rem 0rem;   
+  padding: 0rem 0rem 0.2rem 0rem; 
+  border: 1rem #F9F8F8;  
 }
 .month-name{
   background-color: #425768;
