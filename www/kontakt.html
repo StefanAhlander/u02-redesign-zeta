@@ -11,13 +11,7 @@
 </head>
 
 <body>
-    <!--  Resource credits:
-      *******
-      Thanks to Brooke Cagle for use of her photo from Unsplash which is used as a background-image on the start-page.
-      *******
-    -->
     <div id="container">
-        <!-- Needed for parallax-effect -->
         <header class="wrapper">
 
             <ul>
@@ -40,7 +34,7 @@
 
         </header>
 
-        <nav aria-label="Main">
+        <nav>
             <div class="wrapper">
                 <input id="menu-toggle" type="checkbox" />
 
@@ -105,7 +99,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="publikationer.html">Publikationer</a>
+                        <a href="#">Publikationer</a>
                     </li>
                     <li>
                         <a href="nyhetsrum.html">Nyhetsrum</a>
@@ -139,109 +133,110 @@
             </div>
         </nav>
 
-        <!-- ##############################
-            
-        
-        
-        -->
-        <main id="nyhetsrum" class="wrapper two-column-display">
+        <main id="kontakt" class="wrapper two-column-display">
 
             <aside>
-                <nav role="navigation" aria-label="seconadry">
+                <nav role="navigation">
                     <h3>Länkar</h3>
                     <ul>
-                        <li><a href="#">Nyheter</a></li>
-                        <li><a href="#">Pressmeddelanden</a></li>
-                        <li><a href="#">Kalender</a></li>
-                        <li><a href="#">Filmer</a></li>
-                        <li><a href="#">Pressbilder</a></li>
-                        <li><a href="#">Nyhetsbrev</a></li>
+                        <li><a href="#">Hitta utbildningar</a></li>
+                        <li><a href="#">Anmäl brister i en utbildning</a></li>
+                        <li><a href="#">Jobba hos oss</a></li>
                     </ul>
                 </nav>
             </aside>
 
-            <section id="tabs">
-                <h2>Nyhetsrum</h2>
-                <p>Välkommen till vårt nyhetsrum. Här hittar du nyheter och pressmeddelanden,
-                    bilder, filmer, kalendarium och annan aktuell information.</p>
+            <section>
+                <form action="" method="POST">
+                    <h2>Kontakta myndigheten</h2>
 
-                <input type="radio" name="tabs" id="tabone" checked="checked">
-                <label for="tabone">Aktuellt</label>
-                <div class="tab">
-                    <div class="aktuellt">
-                        <div class="aktuellt-card">
-                            <div>
-                                <img src="images/aktuellt-1.jpg" alt="">
-                            </div>
+                    <label for="fname">Förnamn</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Förnamn...">
 
-                            <div>
-                                <a href="#">
-                                    <h3>Ansök om statsbidrag för utbildning till teckenspråks-
-                                        och dövblindtolk samt skrivtolk</h3>
-                                </a>
-                                <hr>
-                                <p>17 oktober 2019
-                                    Nu kan folkhögskolor ansöka om statsbidrag för den fyraåriga
-                                    teckenspråks- och dövblindtolkutbildningen samt den ettåriga
-                                    skrivtolkutbildningen.</p>
-                            </div>
-                        </div>
+                    <label for="lname">Efternamn</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Efternamn...">
 
-                        <div class="aktuellt-card">
-                            <div>
-                                <img src="images/aktuellt-2.jpg" alt="">
-                            </div>
+                    <label for="phone">Telefonnummer</label>
+                    <input type="tel" id="phone" name="firstname" placeholder="Telefonnummer...">
 
-                            <div>
-                                <a href="#">
-                                    <h3>Informationsträff för vägledare</h3>
-                                </a>
-                                <hr>
-                                <p>15 oktober 2019
-                                    Den 13 november anordnar myndigheten en träff för vägledare
-                                    och välkomnar deltagarna till en förmiddag med föreläsning
-                                    och möjlighet till diskussion kring olika frågor.</p>
-                            </div>
-                        </div>
+                    <label for="email">Epost</label>
+                    <input type="email" id="email" name="lastname" placeholder="Epost...">
 
-                        <div class="aktuellt-card">
-                            <div>
-                                <img src="images/aktuellt-3.jpg" alt="">
-                            </div>
+                    <label for="subject">Ärende</label>
+                    <textarea id="subject" name="subject" placeholder="Ärende..."></textarea>
 
-                            <div>
-                                <h3><a href="#">Hon jobbar med att göra YH mer känt och erkänt</a>
-                                </h3>
-                                <hr>
-                                <p>1 oktober 2019
-                                    Maria Granberg är en tongivande YH-ambassadör. Idag arbetar
-                                    hon på Handelskammaren där hon leder satsningen Yrkeshögskola
-                                    Mälardalen. Innan dess var hon handläggare på Myndigheten
-                                    för yrkeshögskolan och...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <button type="submit">Skicka</button>
 
-                <input type="radio" name="tabs" id="tabtwo">
-                <label for="tabtwo">Pressmeddelanden</label>
-                <div class="tab">
-                    <h1>Tab Two Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
+                </form>
 
-                <input type="radio" name="tabs" id="tabthree">
-                <label for="tabthree">Kalender</label>
-                <div class="tab">
-                    <h1>Tab Three Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
+                <p>Här hittar du kontaktuppgifter till oss på Myndigheten för yrkeshögskolan.</p>
+
+                <h2>Telefon</h2>
+                <p>Ring vår växel <a href="tel:010-2090100">010-209 01 00</a> så hjälper vi dig med
+                    ditt ärende!</p>
+                <p>Växeln är öppen vardagar kl 8.00-17.00.</p>
+
+                <h2>Kundforum</h2>
+                <p>Se vanliga frågor och svar samt ställ dina frågor i vårt digitala frågeforum.</p>
+
+                <h2>E-post</h2>
+                <p>Allmänna frågor/synpunkter: <a href="mailto:info@myh.se">info@myh.se</a></p>
+                <p>Registrator: <a href="mailto:registrator@myh.se">registrator@myh.se</a></p>
+                <p>Webbfrågor: <a href="mailto:webbredaktionen@myh.se">webbredaktionen@myh.se</a>
+                </p>
+                <p>Personlig e-post enligt fornamn.efternamn@myh.se</p>
+
+                <h2>Postadress Västerås</h2>
+                <p>
+                    Myndigheten för yrkeshögskolan
+                    Box 145
+                    721 05 Västerås
+                </p>
+
+                <h2>Besöksadress Västerås</h2>
+                <p>
+                    Ingenjör Bååths gata 19
+                    722 12 Västerås
+                </p>
+                <p>Öppettider: Helgfri måndag-fredag kl 9.00-15.00 med lunchstängt kl
+                    12.00-13.00.
+                </p>
+                <p>Begränsade öppettider 1 nov: 9.00-11.00.</p>
+
+                <h2>Postadress Hässleholm</h2>
+                <p>
+                    Myndigheten för yrkeshögskolan
+                    Box 85
+                    281 21 Hässleholm
+                </p>
+
+                <h2>Besöksadress Hässleholm</h2>
+                <p>
+                    Frykholmsgatan 10
+                    281 31 Hässleholm
+                </p>
+
+                <h2>Organisationsnummer</h2>
+                <p>202100-6230</p>
+
+                <h2>Skicka faktura</h2>
+                <p>
+                    Från och med den 1 april 2019 blir det lag på att alla inköp i offentlig
+                    sektor
+                    ska aktureras med elektronisk faktura (e-faktura). Läs här om hur du kan
+                    fakturera
+                    oss elektroniskt.
+                </p>
+
+                <h2>Bra att veta innan du kontaktar oss</h2>
+                <p>
+                    Myndigheten för yrkeshögskolan är en statlig myndighet. Det du skickar till
+                    oss
+                    via e-post, post eller fax blir därför en allmän handling. Vi registrerar
+                    allmänna
+                    handlingar och sparar dem i vårt diarium.
+                </p>
+
             </section>
 
         </main>

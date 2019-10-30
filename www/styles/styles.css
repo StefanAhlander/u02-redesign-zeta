@@ -5,6 +5,7 @@
 /*  Color scheme */
 /*  Font sizes */
 /*  Paddings and margins */
+/*  Border radius*/
 /*  Reset styles. */
 * {
   padding: 0;
@@ -85,6 +86,9 @@ main.two-column-display > section {
             flex-direction: column;
   }
   main.two-column-display > aside {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
     margin: -2rem 0 0;
     width: 100%;
   }
@@ -402,10 +406,10 @@ nav li > ul > li:hover {
 #hero-image {
   height: 569px;
   margin: 0 auto 1rem;
-  max-width: 1280px;
+  max-width: 1165px;
   position: relative;
-  -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
-          transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
+  -webkit-transform: translateZ(-1.5px) scale(1.5) translateX(-6.7rem) translateY(-2rem);
+          transform: translateZ(-1.5px) scale(1.5) translateX(-6.7rem) translateY(-2rem);
   z-index: -2;
 }
 
@@ -634,11 +638,12 @@ footer {
 }
 
 /***  NYHETSRUM ***/
-h2 {
+#nyhetsrum h2 {
   font-size: 1.5rem;
+  margin-top: 0;
 }
 
-p {
+#nyhetsrum p {
   margin-bottom: 2rem;
 }
 
@@ -865,4 +870,61 @@ aside > nav li:hover a {
 }
 
 /*** PUBLICATIONS END ***/
+/*** KONTAKT ***/
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+#kontakt form {
+  border: 1px solid #526b81;
+  background-color: white;
+  margin: 0 0 3rem;
+  padding: 1rem;
+  /* Style the submit button with a specific background color etc */
+}
+
+#kontakt form > h2 {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#kontakt form input,
+#kontakt form select,
+#kontakt form textarea {
+  border: 1px solid #526b81;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  resize: vertical;
+  width: 100%;
+}
+
+#kontakt form textarea {
+  height: 10rem;
+}
+
+#kontakt form button[type=submit] {
+  background-color: #526b81;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.8rem 1.1rem;
+}
+
+/*** KONTAKT END ***/
 /*# sourceMappingURL=styles.css.map */

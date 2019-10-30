@@ -34,6 +34,8 @@ $topAndBottomPaddingSmallTextbox: 0.5rem;
 $verticalMarginBetweenElms: 3rem;
 $arrowMarginRight: 1rem;
 
+/*  Border radius*/
+$borderRadius: 4px;
 
 /*  Reset styles. */
 * {
@@ -94,6 +96,7 @@ main.two-column-display {
     flex-direction: column;
 
     &>aside {
+      flex: 0 0 auto;
       margin: -2rem 0 0;
       width: 100%;
     }
@@ -407,9 +410,9 @@ nav {
 #hero-image {
   height: 569px;
   margin: 0 auto 1rem;
-  max-width: 1280px;
+  max-width: 1165px;
   position: relative;
-  transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
+  transform: translateZ(-1.5px) scale(1.5) translateX(-6.7rem) translateY(-2rem);
   z-index: -2;
 
   picture {
@@ -602,11 +605,12 @@ footer {
 }
 
 /***  NYHETSRUM ***/
-h2 {
+#nyhetsrum h2 {
   font-size: $headingSizeMainPageheading;
+  margin-top: 0;
 }
 
-p {
+#nyhetsrum p {
   margin-bottom: 2rem;
 }
 
@@ -821,3 +825,62 @@ aside {
 }
 
 /*** PUBLICATIONS END ***/
+
+/*** KONTAKT ***/
+h2 {
+  font-size: $headingSizeMainPageheading;
+  margin-top: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+#kontakt form {
+  border: 1px solid $baseColor-lighter;
+  background-color: white;
+  margin: 0 0 $verticalMarginBetweenElms;
+  padding: 1rem;
+
+  &>h2 {
+    margin: 1rem auto;
+    text-align: center;
+  }
+
+  input,
+  select,
+  textarea {
+    border: 1px solid $baseColor-lighter;
+    border-radius: $borderRadius;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: $topAndBottomPaddingSmallTextbox;
+    resize: vertical;
+    width: 100%;
+  }
+
+  textarea {
+    height: 10rem;
+  }
+
+  /* Style the submit button with a specific background color etc */
+  button[type=submit] {
+    background-color: $baseColor-lighter;
+    border: none;
+    border-radius: $borderRadius;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.8rem 1.1rem;
+  }
+}
+
+/*** KONTAKT END ***/
