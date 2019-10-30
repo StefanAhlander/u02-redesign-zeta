@@ -406,10 +406,10 @@ nav li > ul > li:hover {
 #hero-image {
   height: 569px;
   margin: 0 auto 1rem;
-  max-width: 1280px;
+  max-width: 1165px;
   position: relative;
-  -webkit-transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
-          transform: translateZ(-1.5px) scale(1.6) translateX(-3rem) translateY(-1rem);
+  -webkit-transform: translateZ(-1.5px) scale(1.5) translateX(-6.7rem) translateY(-2rem);
+          transform: translateZ(-1.5px) scale(1.5) translateX(-6.7rem) translateY(-2rem);
   z-index: -2;
 }
 
