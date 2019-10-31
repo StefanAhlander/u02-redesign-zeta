@@ -521,9 +521,10 @@ main.wrapper {
   display: flex;
   text-align: center;
   padding: 0.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-evenly;
   border-radius: 1rem;
+  
 }
 
 .aktuellt>h2 {
@@ -534,19 +535,14 @@ main.wrapper {
 
 .aktuellt-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: white;
-  width: 45%;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  padding: 0.5rem;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-  /*box-shadow: 5px 5px 5px 5px #cfcfcf;*/
-}
-
-.aktuellt-card img {
   width: 100%;
-  border-radius: 1rem;
+  /*height: fit-content;*/
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);*/
+  /*box-shadow: 5px 5px 5px 5px #cfcfcf;*/
 }
 
 .aktuellt-card a {
@@ -556,6 +552,7 @@ main.wrapper {
 .aktuellt-card div>hr {
   width: 75%;
   margin: 15px auto;
+  border: 1px solid black;
 }
 
 .aktuellt-card a:hover,
@@ -564,47 +561,56 @@ a:visited {
   text-decoration: none;
 }
 
+.aktuellt-card div:nth-child(1) {
+  min-width: 438px;
+  min-height: 277.5px;
+}
+
 .aktuellt-card div:nth-child(2) {
   margin: auto;
+  padding: 1rem;
 }
 
-@media screen and (max-width: 1024px) {
-
-  /*** AKTUELLT ***/
-  .aktuellt {
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
-
-  .aktuellt-card {
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 1.5rem;
-    flex-direction: row;
-  }
-
-  .aktuellt-card>div {
-    width: 50%;
-  }
-
+.card-img-1 {
+  background-image: url(../images/aktuellt-1.jpg);
 }
 
-/*** AKTUELLT ***/
-@media screen and (max-width: 850px) {
-  .aktuellt-card {
-    width: 100%
-  }
+.card-img-2 {
+  background-image: url(../images/aktuellt-2.jpg);
 }
 
-@media screen and (max-width: 750px) {
-  .aktuellt-card {
-    width: 90%;
-    flex-direction: column;
-  }
+.card-img-3 {
+  background-image: url(../images/aktuellt-3.jpg);
+}
 
-  .aktuellt-card div {
+.card-img-1, .card-img-2, .card-img-3 {
+  background-size: cover;
+  background-repeat: no-repeat; 
+/*  min-height: 100%; */
+/*  min-width: 500px; */
+  
+}
+
+@media screen and (max-width: 950px) {
+  .aktuellt-card {
     width: 100%;
+    flex-direction: column;
   }
+
+  .aktuellt-card div:nth-child(2) {
+    margin: auto;
+    width: 100%;
+    padding: 1rem;
+    height: fit-content;
+  }
+  
+  .aktuellt-card div:nth-child(1) {
+    width: 100%;
+    height: 50vw;
+    min-width: 0;
+    min-height: 1px; 
+  }  
+
 }
 
 /*** AKTUELLT END ***/
