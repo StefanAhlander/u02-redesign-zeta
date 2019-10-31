@@ -99,7 +99,7 @@ main.two-column-display {
 
   &>section {
     flex: 0 1 100%;
-    max-width: 40rem;
+    max-width: 50rem;
   }
 
   @media screen and (max-width: 1010px) {
@@ -524,7 +524,7 @@ main.wrapper {
   flex-direction: column;
   justify-content: space-evenly;
   border-radius: 1rem;
-  
+
 }
 
 .aktuellt>h2 {
@@ -583,12 +583,14 @@ a:visited {
   background-image: url(../images/aktuellt-3.jpg);
 }
 
-.card-img-1, .card-img-2, .card-img-3 {
+.card-img-1,
+.card-img-2,
+.card-img-3 {
   background-size: cover;
-  background-repeat: no-repeat; 
-/*  min-height: 100%; */
-/*  min-width: 500px; */
-  
+  background-repeat: no-repeat;
+  /*  min-height: 100%; */
+  /*  min-width: 500px; */
+
 }
 
 @media screen and (max-width: 950px) {
@@ -603,13 +605,13 @@ a:visited {
     padding: 1rem;
     height: fit-content;
   }
-  
+
   .aktuellt-card div:nth-child(1) {
     width: 100%;
     height: 50vw;
     min-width: 0;
-    min-height: 1px; 
-  }  
+    min-height: 1px;
+  }
 
 }
 
@@ -863,6 +865,7 @@ input[type=submit]:hover {
   border: 1px solid $baseColor-lighter;
   background-color: white;
   margin: 0 0 $verticalMarginBetweenElms;
+  max-width: 40rem;
   padding: 1rem;
 
   &>h2 {
@@ -908,7 +911,7 @@ input[type=submit]:hover {
     margin: 0 auto 3rem;
   }
 
-  h3 {
+  &>section>h3 {
     font-size: $headingSizeMainPageheading;
     margin: 2rem 0 1rem;
   }
