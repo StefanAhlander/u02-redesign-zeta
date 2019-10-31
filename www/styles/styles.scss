@@ -254,7 +254,7 @@ nav {
     position: absolute;
     top: 2.4rem;
     transform: scale(0);
-    transform-origin: center 0;
+    transform-origin: center0 0;
     transition: all 0.3s ease;
     z-index: 2;
   }
@@ -1089,7 +1089,7 @@ input[type=submit]:hover {
   }
 
   div {
-    background-color: rgba(66, 87, 104, 0.6);
+    /*background-color: rgba(66, 87, 104, 0.6);*/
     height: 99%;
     width: 100%;
     position: absolute;
