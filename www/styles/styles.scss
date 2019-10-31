@@ -884,3 +884,95 @@ input[type=submit]:hover {
 }
 
 /*** KONTAKT END ***/
+
+/*** STATISTIK ***/
+#statistik {
+  h2 {
+    font-size: $headingSizeMainPageheading;
+    margin: 0 auto 3rem;
+  }
+}
+
+#graph {
+  max-width: 600px;
+  position: relative;
+
+  img {
+    height: 400px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  #graph-content {
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    span {
+      position: absolute;
+      bottom: 65px;
+      width: 40px;
+    }
+
+    span:nth-child(1) {
+      left: 95px;
+      height: 150px;
+      background-color: lighten($baseColor, 20);
+      animation: new-heights 8s ease-in-out -2s infinite running;
+    }
+
+    span:nth-child(2) {
+      left: 150px;
+      height: 50px;
+      background-color: lighten($baseColor, 0);
+      animation: new-heights 9s ease-in-out -4s infinite running;
+    }
+
+    span:nth-child(3) {
+      left: 205px;
+      height: 100px;
+      background-color: lighten($baseColor, 30);
+      animation: new-heights 8.5s ease-in-out -1s infinite running;
+    }
+
+    span:nth-child(4) {
+      left: 260px;
+      height: 120px;
+      background-color: lighten($baseColor, 10);
+      animation: new-heights 10s ease-in-out 0s infinite running;
+    }
+
+    span:nth-child(5) {
+      left: 315px;
+      height: 70px;
+      background-color: lighten($baseColor, 0);
+      animation: new-heights 8.8s ease-in-out -7s infinite running;
+    }
+
+    span:nth-child(6) {
+      left: 370px;
+      height: 90px;
+      background-color: lighten($baseColor, 20);
+      animation: new-heights 9.2s ease-in-out -3.5s infinite running;
+    }
+
+    @keyframes new-heights {
+
+      0%,
+      100% {
+        height: 50px;
+      }
+
+      50% {
+        height: 250px;
+      }
+    }
+  }
+}
+
+
+
+
+/*** STATISTIK END ***/

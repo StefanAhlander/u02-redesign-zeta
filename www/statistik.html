@@ -11,13 +11,7 @@
 </head>
 
 <body>
-    <!--  Resource credits:
-      *******
-      Thanks to Brooke Cagle for use of her photo from Unsplash which is used as a background-image on the start-page.
-      *******
-    -->
     <div id="container">
-        <!-- Needed for parallax-effect -->
         <header class="wrapper">
 
             <ul>
@@ -40,7 +34,7 @@
 
         </header>
 
-        <nav aria-label="Main">
+        <nav>
             <div class="wrapper">
                 <input id="menu-toggle" type="checkbox" />
 
@@ -139,109 +133,34 @@
             </div>
         </nav>
 
-        <!-- ##############################
-            
-        
-        
-        -->
-        <main id="nyhetsrum" class="wrapper two-column-display">
+        <main id="statistik" class="wrapper two-column-display">
 
             <aside>
-                <nav role="navigation" aria-label="seconadry">
+                <nav role="navigation" aria-label="seconadary navigation">
                     <h3>Länkar</h3>
                     <ul>
-                        <li><a href="#">Nyheter</a></li>
-                        <li><a href="#">Pressmeddelanden</a></li>
-                        <li><a href="#">Kalender</a></li>
-                        <li><a href="#">Filmer</a></li>
-                        <li><a href="#">Pressbilder</a></li>
-                        <li><a href="#">Nyhetsbrev</a></li>
+                        <li><a href="#">Yrkeshögskoleutbildningar</a></li>
+                        <li><a href="#">Konst- och kulturutbildningar och<br>utbildningar med endast
+                                tillsyn</a></li>
+                        <li><a href="#">Tolkutbildningar inom <br>folkbildningen</a></li>
                     </ul>
                 </nav>
             </aside>
 
-            <section id="tabs">
-                <h2>Nyhetsrum</h2>
-                <p>Välkommen till vårt nyhetsrum. Här hittar du nyheter och pressmeddelanden,
-                    bilder, filmer, kalendarium och annan aktuell information.</p>
+            <section>
+                <h2>Statistik</h2>
 
-                <input type="radio" name="tabs" id="tabone" checked="checked">
-                <label for="tabone">Aktuellt</label>
-                <div class="tab">
-                    <div class="aktuellt">
-                        <div class="aktuellt-card">
-                            <div>
-                                <img src="images/aktuellt-1.jpg" alt="">
-                            </div>
-
-                            <div>
-                                <a href="#">
-                                    <h3>Ansök om statsbidrag för utbildning till teckenspråks-
-                                        och dövblindtolk samt skrivtolk</h3>
-                                </a>
-                                <hr>
-                                <p>17 oktober 2019
-                                    Nu kan folkhögskolor ansöka om statsbidrag för den fyraåriga
-                                    teckenspråks- och dövblindtolkutbildningen samt den ettåriga
-                                    skrivtolkutbildningen.</p>
-                            </div>
-                        </div>
-
-                        <div class="aktuellt-card">
-                            <div>
-                                <img src="images/aktuellt-2.jpg" alt="">
-                            </div>
-
-                            <div>
-                                <a href="#">
-                                    <h3>Informationsträff för vägledare</h3>
-                                </a>
-                                <hr>
-                                <p>15 oktober 2019
-                                    Den 13 november anordnar myndigheten en träff för vägledare
-                                    och välkomnar deltagarna till en förmiddag med föreläsning
-                                    och möjlighet till diskussion kring olika frågor.</p>
-                            </div>
-                        </div>
-
-                        <div class="aktuellt-card">
-                            <div>
-                                <img src="images/aktuellt-3.jpg" alt="">
-                            </div>
-
-                            <div>
-                                <h3><a href="#">Hon jobbar med att göra YH mer känt och erkänt</a>
-                                </h3>
-                                <hr>
-                                <p>1 oktober 2019
-                                    Maria Granberg är en tongivande YH-ambassadör. Idag arbetar
-                                    hon på Handelskammaren där hon leder satsningen Yrkeshögskola
-                                    Mälardalen. Innan dess var hon handläggare på Myndigheten
-                                    för yrkeshögskolan och...</p>
-                            </div>
-                        </div>
+                <figure id="graph">
+                    <img src="./images/graph_axis.png" alt="x och y axlarna på en graf">
+                    <div id="graph-content">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                </div>
-
-                <input type="radio" name="tabs" id="tabtwo">
-                <label for="tabtwo">Pressmeddelanden</label>
-                <div class="tab">
-                    <h1>Tab Two Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-
-                <input type="radio" name="tabs" id="tabthree">
-                <label for="tabthree">Kalender</label>
-                <div class="tab">
-                    <h1>Tab Three Content</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
+                </figure>
             </section>
 
         </main>
