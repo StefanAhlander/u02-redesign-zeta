@@ -610,7 +610,6 @@ a:visited {
 
 .card-img-3 {
   background-image: url(../images/aktuellt-3.jpg);
-<<<<<<< Updated upstream
 }
 
 .card-img-1, .card-img-2, .card-img-3 {
@@ -620,17 +619,6 @@ a:visited {
   /*  min-width: 500px; */
 }
 
-=======
-}
-
-.card-img-1, .card-img-2, .card-img-3 {
-  background-size: cover;
-  background-repeat: no-repeat;
-  /*  min-height: 100%; */
-  /*  min-width: 500px; */
-}
-
->>>>>>> Stashed changes
 @media screen and (max-width: 950px) {
   .aktuellt-card {
     width: 100%;
@@ -641,7 +629,6 @@ a:visited {
   }
   .aktuellt-card div:nth-child(2) {
     margin: auto;
-<<<<<<< Updated upstream
     width: 100%;
     padding: 1rem;
     height: -webkit-fit-content;
@@ -650,16 +637,6 @@ a:visited {
   }
   .aktuellt-card div:nth-child(1) {
     width: 100%;
-=======
-    width: 100%;
-    padding: 1rem;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  .aktuellt-card div:nth-child(1) {
-    width: 100%;
->>>>>>> Stashed changes
     height: 50vw;
     min-width: 0;
     min-height: 1px;
