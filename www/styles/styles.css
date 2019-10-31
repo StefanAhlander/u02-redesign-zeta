@@ -523,6 +523,54 @@ main.wrapper {
   border-radius: 5px;
 }
 
+/*** Calendar ***/
+#calendar{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+
+}
+.month-box{
+  background-color: #F9F8F8;;
+  max-height: 12rem;
+  max-width: 24rem;
+  border-radius: 0.8rem;
+  margin: 0.5rem;
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(168, 106, 106, 0.2);
+  padding: 0rem 0rem 0.2rem 0rem; 
+  border: 1rem #F9F8F8;  
+}
+.month-name{
+  background-color: #425768;
+  color: #F9F8F8;;
+  max-height: 3rem;
+  font-size: 2rem;
+  margin: 0rem;
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
+  text-align: center;
+}
+.event{
+  display: flex;
+  flex-direction: flex-start;
+  background-color: #F9F8F8;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(168, 106, 106, 0.2);
+  margin: 0.3rem 0.5rem;
+  padding: 0rem;
+  height: 4rem;
+}
+.date{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  height: 4rem;
+  width: 4rem;
+  margin: 0rem;
+  padding: 0rem;
+}
+
 /*** AKTUELLT ***/
 .aktuellt {
   width: 100%;
