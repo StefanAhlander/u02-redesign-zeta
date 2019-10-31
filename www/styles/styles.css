@@ -551,7 +551,7 @@ main.wrapper {
 }
 .event{
   display: flex;
-  flex-direction: flex-start;
+  flex-direction: center;
   background-color: #F9F8F8;
   border-radius: 0.5rem;
   box-shadow: 0 0.2rem 0.4rem 0 rgba(168, 106, 106, 0.2);
@@ -559,15 +559,19 @@ main.wrapper {
   padding: 0rem;
   height: 4rem;
 }
-.date{
+.event-text{
+  height: 100%;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  }
+.date{
   font-size: 2.5rem;
   height: 4rem;
   width: 4rem;
-  margin: 0rem;
+  margin: 0.2rem 0rem 0rem 0.5rem;
   padding: 0rem;
 }
 
