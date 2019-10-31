@@ -94,7 +94,7 @@ main.two-column-display {
     flex: 0 0 20rem;
     margin-left: 3rem;
     margin-right: 4rem;
-    max-width: 638px;
+    max-width: 20rem;
   }
 
   &>section {
@@ -905,7 +905,8 @@ input[type=submit]:hover {
 /*** KONTAKT END ***/
 
 /*** STATISTIK ***/
-#statistik {
+#statistik,
+#lagar {
   h2 {
     font-size: $headingSizeMainPageheading;
     margin: 0 auto 3rem;
@@ -1069,3 +1070,34 @@ input[type=submit]:hover {
 }
 
 /*** Calendar End ***/
+
+/*** LAGAR ***/
+
+#lagar section {
+  width: 100%;
+  max-width: 40rem;
+}
+
+#legal {
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+
+  img {
+    width: 100%;
+    z-index: -1;
+  }
+
+  div {
+    background-color: rgba(37, 68, 145, 0.4);
+    height: 99%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+
+
+/*** LAGAR END ***/
