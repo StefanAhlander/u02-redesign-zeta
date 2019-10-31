@@ -1154,14 +1154,5 @@ input[type=submit]:hover {
   z-index: -1;
 }
 
-#legal div {
-  /*background-color: rgba(66, 87, 104, 0.6);*/
-  height: 99%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
-
 /*** LAGAR END ***/
 /*# sourceMappingURL=styles.css.map */
