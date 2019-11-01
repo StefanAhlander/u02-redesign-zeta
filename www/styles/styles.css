@@ -553,7 +553,13 @@ div .card-box:hover h3 {
 .topic {
   font-size: 1rem;
   width: 100%;
-  padding: 0.5rem 2rem 0;
+  padding: 0 2rem;
+}
+
+.topic-two {
+  font-size: 1rem;
+  width: 100%;
+  padding: 1rem 2rem 0;
 }
 
 .right-arrow {
