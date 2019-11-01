@@ -255,8 +255,8 @@ nav li > ul {
   top: 2.4rem;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transform-origin: center0 0;
-          transform-origin: center0 0;
+  -webkit-transform-origin: center 0;
+          transform-origin: center 0;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   z-index: 2;
