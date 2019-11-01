@@ -419,39 +419,22 @@ nav {
     of the image. */
 #hero-image {
   height: 569px;
-  margin: 0 auto 1rem;
+  margin: 3rem auto;
+  width: 100%;
   max-width: 1248px;
   position: relative;
-  transform: translateZ(-1.5px) scale(1.595) translateX(-4rem) translateY(-2rem);
+  overflow: hidden;
   z-index: -2;
 
-  picture {
-    width: 100%;
-  }
 
-  @media screen and (max-width: 828px) {
-    height: 569px;
-    margin: 0 auto 6rem;
-    width: 100%;
-    transform: translateZ(-1.5px) scale(1.6) translateX(-1rem) translateY(-1.5rem);
-  }
-
-  @media screen and (max-width: 768px) {
-    height: 569px;
-    margin: 0 auto 6rem;
-    transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(-1.5rem);
-  }
-
-  @media screen and (max-width: 704px) {
-    height: 569px;
-    margin: 0 auto 6rem;
-    transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(3rem);
-  }
-
-  @media screen and (max-width: 414px) {
-    height: 569px;
-    margin: 0 auto -10rem;
-    transform: translateZ(-1.5px) scale(1) translateX(-10rem) translateY(-1.5rem);
+  #hero-inner {
+    background-image: url(../images/brooke-cagle-g1Kr4Ozfoac-unsplash-large.jpg);
+    transform: translateZ(-1px) scale(1.5) translateY(-10px) translateX(-4px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -466,30 +449,14 @@ nav {
     transform: none;
     z-index: -2;
 
-    picture,
-    img {
-      width: 100%;
-    }
-
-    @media screen and (max-width: 828px) {
-      margin: 0 auto 1rem;
-      width: 100%;
+    #hero-inner {
+      background-image: url(../images/brooke-cagle-g1Kr4Ozfoac-unsplash-large.jpg);
       transform: none;
-    }
-
-    @media screen and (max-width: 768px) {
-      margin: 0 auto 1rem;
-      transform: none;
-    }
-
-    @media screen and (max-width: 704px) {
-      margin: 0 auto 1rem;
-      transform: none;
-    }
-
-    @media screen and (max-width: 414px) {
-      margin: 0 auto 1rem;
-      transform: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 }
@@ -502,7 +469,7 @@ main.wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: -4rem auto 0;
+  margin: 0rem auto 0;
   width: 100%;
   max-width: 1248px;
 }
@@ -510,7 +477,7 @@ main.wrapper {
 .card-box {
   position: relative;
   background-color: #cbf6e3;
-  width: 32%;
+  width: 31%;
   height: 215px;
   margin-bottom: 1rem;
 }
