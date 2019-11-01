@@ -1022,7 +1022,7 @@ input[type=submit]:hover {
   background-color: #F9F8F8;
   ;
   max-height: 12rem;
-  max-width: 24rem;
+  width: 24rem;
   border-radius: 0.8rem;
   margin: 0.5rem;
   box-shadow: 0 0.4rem 0.8rem 0 rgba(168, 106, 106, 0.2);
@@ -1088,7 +1088,15 @@ input[type=submit]:hover {
     z-index: -1;
   }
 }
-
-
-
 /*** LAGAR END ***/
+
+/*** Nyhetsrum Calendar ***/
+#nyhetsrum-month-box{
+  width:100%;
+}
+#nyhetsrum-month-name{
+  width: 100%;
+}
+#nyhetsrum-event{
+  width: 98%;
+}
