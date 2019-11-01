@@ -416,10 +416,10 @@ nav li > ul > li:hover {
 #hero-image {
   height: 569px;
   margin: 0 auto 1rem;
-  max-width: 1165px;
+  max-width: 1248px;
   position: relative;
-  -webkit-transform: translateZ(-1.5px) scale(1.5) translateX(-6.6rem) translateY(-2rem);
-          transform: translateZ(-1.5px) scale(1.5) translateX(-6.6rem) translateY(-2rem);
+  -webkit-transform: translateZ(-1.5px) scale(1.595) translateX(-4rem) translateY(-2rem);
+          transform: translateZ(-1.5px) scale(1.595) translateX(-4rem) translateY(-2rem);
   z-index: -2;
 }
 
@@ -527,7 +527,7 @@ main.wrapper {
           justify-content: space-between;
   margin: -4rem auto 0;
   width: 100%;
-  max-width: 1174px;
+  max-width: 1248px;
 }
 
 .card-box {
