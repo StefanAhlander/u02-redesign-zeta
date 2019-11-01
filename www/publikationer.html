@@ -11,7 +11,13 @@
 </head>
 
 <body>
+    <!--  Resource credits:
+      *******
+      Thanks to Brooke Cagle for use of her photo from Unsplash which is used as a background-image on the start-page.
+      *******
+    -->
     <div id="container">
+        <!-- Needed for parallax-effect -->
         <header class="wrapper">
 
             <ul>
@@ -34,7 +40,7 @@
 
         </header>
 
-        <nav>
+        <nav aria-label="Main">
             <div class="wrapper">
                 <input id="menu-toggle" type="checkbox" />
 
@@ -133,110 +139,112 @@
             </div>
         </nav>
 
-        <main id="kontakt" class="wrapper two-column-display">
+        <main id="publikationer" class="wrapper">
 
-            <aside>
-                <nav role="navigation">
-                    <h3>Länkar</h3>
-                    <ul>
-                        <li><a href="#">Hitta utbildningar</a></li>
-                        <li><a href="#">Anmäl brister i en utbildning</a></li>
-                        <li><a href="#">Jobba hos oss</a></li>
-                    </ul>
-                </nav>
-            </aside>
+            <section id="publication-header">
+                <h2>Publikationer</h2>
 
-            <section>
-                <form action="" method="POST">
-                    <h2>Kontakta myndigheten</h2>
+                <p>Här hittar du Myndigheten för yrkeshögskolans rapporter, faktablad, broschyrer,
+                    informationsblad och andra publikationer. Du kan filtrera typ av publikation,
+                    område
+                    och utgivningsår nedan.</p>
+            </section>
 
-                    <label for="fname">Förnamn</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Förnamn...">
+            <section id="publication-filter-wrapper">
+                <form id="pub-filter" action="POST">
 
-                    <label for="lname">Efternamn</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Efternamn...">
+                    <div>
+                        <label for="type-select">Publikationstyp:</label>
 
-                    <label for="phone">Telefonnummer</label>
-                    <input type="tel" id="phone" name="firstname" placeholder="Telefonnummer...">
+                        <select name="type-select" id="type-select">
+                            <option value="all">Alla publikationstyper</option>
+                            <option value="repports">Rapporter</option>
+                            <option value="feedback">Återrapportering av regeringsuppdrag</option>
+                            <option value="info">Informationsmaterial</option>
+                            <option value="annual">Årsredovisningar</option>
+                        </select>
+                    </div>
 
-                    <label for="email">Epost</label>
-                    <input type="email" id="email" name="lastname" placeholder="Epost...">
+                    <div>
+                        <label for="area-select">Verksamhetsområde:</label>
 
-                    <label for="subject">Ärende</label>
-                    <textarea id="subject" name="subject" placeholder="Ärende..."></textarea>
+                        <select name="area-select" id="area-select">
+                            <option value="all">Alla områden</option>
+                            <option value="polytechnic">Yrkeshögskolan</option>
+                            <option value="art">Konst- och kulturutbildningar</option>
+                            <option value="interpreter">Tolkutbildningar</option>
+                            <option value="oversight">Utbildningar med endast tillsyn</option>
+                            <option value="validation">Validering</option>
+                            <option value="seqf">SeQF</option>
+                        </select>
+                    </div>
 
-                    <button type="submit">Skicka</button>
+                    <div>
+                        <label for="year-select"> År: </label>
 
+                        <select name="year-select" id="year-select">
+                            <option value="all">Alla år</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                        </select>
+                    </div>
                 </form>
+            </section>
 
-                <p>Här hittar du kontaktuppgifter till oss på Myndigheten för yrkeshögskolan.</p>
+            <section id="publications-list">
 
-                <h2>Telefon</h2>
-                <p>Ring vår växel <a href="tel:010-2090100">010-209 01 00</a> så hjälper vi dig med
-                    ditt ärende!</p>
-                <p>Växeln är öppen vardagar kl 8.00-17.00.</p>
+                <div class="pub-list-card">
+                    <div class="pub-list-img"></div>
+                    <div class="pub-list-text">
+                        <h3><a href="#">Resultat av tematisk kvalitetsgranskning av anordnares
+                                arbete med validering mot den sammanhållna grundutbildningen till
+                                kontakttolk 2019</a></h3>
 
-                <h2>Kundforum</h2>
-                <p>Se vanliga frågor och svar samt ställ dina frågor i vårt digitala frågeforum.</p>
+                        <p><span class="pub-year">Utgiven: 2019-10-17</span> I denna rapport
+                            presenteras det samlade
+                            resultatet från myndighetens tematiska kvalitetsgranskningar... </p>
 
-                <h2>E-post</h2>
-                <p>Allmänna frågor/synpunkter: <a href="mailto:info@myh.se">info@myh.se</a></p>
-                <p>Registrator: <a href="mailto:registrator@myh.se">registrator@myh.se</a></p>
-                <p>Webbfrågor: <a href="mailto:webbredaktionen@myh.se">webbredaktionen@myh.se</a>
-                </p>
-                <p>Personlig e-post enligt fornamn.efternamn@myh.se</p>
+                        <p><span class="pdf-icon"></span><a href="#">Ladda ner rapporten</a></p>
+                    </div>
+                </div>
 
-                <h2>Postadress Västerås</h2>
-                <p>
-                    Myndigheten för yrkeshögskolan
-                    Box 145
-                    721 05 Västerås
-                </p>
+                <div class="pub-list-card">
+                    <div class="pub-list-img"></div>
+                    <div class="pub-list-text">
+                        <h3><a href="#">Resultat av tematisk kvalitetsgranskning av anordnares
+                                arbete med validering mot den sammanhållna grundutbildningen till
+                                kontakttolk 2019</a></h3>
 
-                <h2>Besöksadress Västerås</h2>
-                <p>
-                    Ingenjör Bååths gata 19
-                    722 12 Västerås
-                </p>
-                <p>Öppettider: Helgfri måndag-fredag kl 9.00-15.00 med lunchstängt kl
-                    12.00-13.00.
-                </p>
-                <p>Begränsade öppettider 1 nov: 9.00-11.00.</p>
+                        <p><span class="pub-year">Utgiven: 2019-10-17</span> I denna rapport
+                            presenteras det samlade
+                            resultatet från myndighetens tematiska kvalitetsgranskningar... </p>
 
-                <h2>Postadress Hässleholm</h2>
-                <p>
-                    Myndigheten för yrkeshögskolan
-                    Box 85
-                    281 21 Hässleholm
-                </p>
+                        <p><span class="pdf-icon"></span><a href="#">Ladda ner rapporten</a></p>
+                    </div>
+                </div>
 
-                <h2>Besöksadress Hässleholm</h2>
-                <p>
-                    Frykholmsgatan 10
-                    281 31 Hässleholm
-                </p>
+                <div class="pub-list-card">
+                    <div class="pub-list-img"></div>
+                    <div class="pub-list-text">
+                        <h3><a href="#">Resultat av tematisk kvalitetsgranskning av anordnares
+                                arbete med validering mot den sammanhållna grundutbildningen till
+                                kontakttolk 2019</a></h3>
 
-                <h2>Organisationsnummer</h2>
-                <p>202100-6230</p>
+                        <p><span class="pub-year">Utgiven: 2019-10-17</span> I denna rapport
+                            presenteras det samlade
+                            resultatet från myndighetens tematiska kvalitetsgranskningar... </p>
 
-                <h2>Skicka faktura</h2>
-                <p>
-                    Från och med den 1 april 2019 blir det lag på att alla inköp i offentlig
-                    sektor
-                    ska aktureras med elektronisk faktura (e-faktura). Läs här om hur du kan
-                    fakturera
-                    oss elektroniskt.
-                </p>
-
-                <h2>Bra att veta innan du kontaktar oss</h2>
-                <p>
-                    Myndigheten för yrkeshögskolan är en statlig myndighet. Det du skickar till
-                    oss
-                    via e-post, post eller fax blir därför en allmän handling. Vi registrerar
-                    allmänna
-                    handlingar och sparar dem i vårt diarium.
-                </p>
-
+                        <p><span class="pdf-icon"></span><a href="#">Ladda ner rapporten</a></p>
+                    </div>
+                </div>
             </section>
 
         </main>
