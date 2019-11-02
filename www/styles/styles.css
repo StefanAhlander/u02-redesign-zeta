@@ -853,11 +853,25 @@ a:visited {
 }
 */
 /*** AKTUELLT END ***/
-footer {
+/***  FOOTER ***/
+#fotter {
+  width: 100%;
   background-color: #425768;
-  height: 100vh;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3rem;
 }
 
+.column {
+  float: center;
+  width: 100%;
+  color: white;
+  border-bottom: solid;
+  border-width: 1px;
+}
+
+/***  FOOTER END ***/
 /***  NYHETSRUM ***/
 #nyhetsrum h2 {
   font-size: 1.5rem;
@@ -1197,48 +1211,48 @@ input[type=submit]:hover {
   left: 60px;
   height: 150px;
   background-color: #6d8ba3;
-  -webkit-animation: new-heights 8s ease-in-out -2s infinite running;
-          animation: new-heights 8s ease-in-out -2s infinite running;
+  -webkit-animation: new-heights 8s ease-in-out -2s infinite;
+          animation: new-heights 8s ease-in-out -2s infinite;
 }
 
 #graph #graph-content span:nth-child(2) {
   left: 100px;
   height: 50px;
   background-color: #425768;
-  -webkit-animation: new-heights 9s ease-in-out -4s infinite running;
-          animation: new-heights 9s ease-in-out -4s infinite running;
+  -webkit-animation: new-heights 9s ease-in-out -4s infinite;
+          animation: new-heights 9s ease-in-out -4s infinite;
 }
 
 #graph #graph-content span:nth-child(3) {
   left: 140px;
   height: 100px;
   background-color: #8da4b6;
-  -webkit-animation: new-heights 8.5s ease-in-out -1s infinite running;
-          animation: new-heights 8.5s ease-in-out -1s infinite running;
+  -webkit-animation: new-heights 8.5s ease-in-out -1s infinite;
+          animation: new-heights 8.5s ease-in-out -1s infinite;
 }
 
 #graph #graph-content span:nth-child(4) {
   left: 180px;
   height: 120px;
   background-color: #567187;
-  -webkit-animation: new-heights 10s ease-in-out 0s infinite running;
-          animation: new-heights 10s ease-in-out 0s infinite running;
+  -webkit-animation: new-heights 10s ease-in-out 0s infinite;
+          animation: new-heights 10s ease-in-out 0s infinite;
 }
 
 #graph #graph-content span:nth-child(5) {
   left: 220px;
   height: 70px;
   background-color: #425768;
-  -webkit-animation: new-heights 8.8s ease-in-out -7s infinite running;
-          animation: new-heights 8.8s ease-in-out -7s infinite running;
+  -webkit-animation: new-heights 8.8s ease-in-out -7s infinite;
+          animation: new-heights 8.8s ease-in-out -7s infinite;
 }
 
 #graph #graph-content span:nth-child(6) {
   left: 260px;
   height: 90px;
   background-color: #6d8ba3;
-  -webkit-animation: new-heights 9.2s ease-in-out -3.5s infinite running;
-          animation: new-heights 9.2s ease-in-out -3.5s infinite running;
+  -webkit-animation: new-heights 9.2s ease-in-out -3.5s infinite;
+          animation: new-heights 9.2s ease-in-out -3.5s infinite;
 }
 
 @-webkit-keyframes new-heights {
@@ -1275,7 +1289,10 @@ input[type=submit]:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 10px;
+  padding: 10px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .month-box {
@@ -1283,11 +1300,11 @@ input[type=submit]:hover {
   max-height: 12rem;
   width: 24rem;
   border-radius: 0.8rem;
-  margin: 0.5rem;
   -webkit-box-shadow: 0 0.4rem 0.8rem 0 rgba(168, 106, 106, 0.2);
           box-shadow: 0 0.4rem 0.8rem 0 rgba(168, 106, 106, 0.2);
   padding: 0rem 0rem 0.2rem 0rem;
   border: 1rem #F9F8F8;
+  margin-bottom: 1rem;
 }
 
 .month-name {
@@ -1304,10 +1321,10 @@ input[type=submit]:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: center;
-          flex-direction: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: #F9F8F8;
   border-radius: 0.5rem;
   -webkit-box-shadow: 0 0.2rem 0.4rem 0 rgba(168, 106, 106, 0.2);
@@ -1341,6 +1358,12 @@ input[type=submit]:hover {
   width: 4rem;
   margin: 0.2rem 0rem 0rem 0.5rem;
   padding: 0rem;
+}
+
+@media screen and (max-width: 816px) {
+  .month-box {
+    margin: 1rem auto;
+  }
 }
 
 /*** Calendar End ***/
