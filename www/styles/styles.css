@@ -1135,7 +1135,10 @@ input[type=submit]:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 10px;
+  padding: 10px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .month-box {
@@ -1143,11 +1146,11 @@ input[type=submit]:hover {
   max-height: 12rem;
   width: 24rem;
   border-radius: 0.8rem;
-  margin: 0.5rem;
   -webkit-box-shadow: 0 0.4rem 0.8rem 0 rgba(168, 106, 106, 0.2);
           box-shadow: 0 0.4rem 0.8rem 0 rgba(168, 106, 106, 0.2);
   padding: 0rem 0rem 0.2rem 0rem;
   border: 1rem #F9F8F8;
+  margin-bottom: 1rem;
 }
 
 .month-name {
@@ -1201,6 +1204,12 @@ input[type=submit]:hover {
   width: 4rem;
   margin: 0.2rem 0rem 0rem 0.5rem;
   padding: 0rem;
+}
+
+@media screen and (max-width: 816px) {
+  .month-box {
+    margin: 1rem auto;
+  }
 }
 
 /*** Calendar End ***/
