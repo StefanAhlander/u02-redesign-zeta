@@ -1047,7 +1047,7 @@ input[type=submit]:hover {
       left: 260px;
       height: 90px;
       background-color: lighten($baseColor, 20);
-      animation: new-heights 9.2s ease-in-out -3.5s infinite running;
+      animation: new-heights 9.2s ease-in-out -3.5s infinite;
     }
 
     @keyframes new-heights {
