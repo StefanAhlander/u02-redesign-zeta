@@ -1012,35 +1012,35 @@ input[type=submit]:hover {
       left: 60px;
       height: 150px;
       background-color: lighten($baseColor, 20);
-      animation: new-heights 8s ease-in-out -2s infinite running;
+      animation: new-heights 8s ease-in-out -2s infinite;
     }
 
     span:nth-child(2) {
       left: 100px;
       height: 50px;
       background-color: lighten($baseColor, 0);
-      animation: new-heights 9s ease-in-out -4s infinite running;
+      animation: new-heights 9s ease-in-out -4s infinite;
     }
 
     span:nth-child(3) {
       left: 140px;
       height: 100px;
       background-color: lighten($baseColor, 30);
-      animation: new-heights 8.5s ease-in-out -1s infinite running;
+      animation: new-heights 8.5s ease-in-out -1s infinite;
     }
 
     span:nth-child(4) {
       left: 180px;
       height: 120px;
       background-color: lighten($baseColor, 10);
-      animation: new-heights 10s ease-in-out 0s infinite running;
+      animation: new-heights 10s ease-in-out 0s infinite;
     }
 
     span:nth-child(5) {
       left: 220px;
       height: 70px;
       background-color: lighten($baseColor, 0);
-      animation: new-heights 8.8s ease-in-out -7s infinite running;
+      animation: new-heights 8.8s ease-in-out -7s infinite;
     }
 
     span:nth-child(6) {
@@ -1105,7 +1105,7 @@ input[type=submit]:hover {
 
 .event {
   display: flex;
-  flex-direction: center;
+  flex-direction: row;
   background-color: #F9F8F8;
   border-radius: 0.5rem;
   box-shadow: 0 0.2rem 0.4rem 0 rgba(168, 106, 106, 0.2);
