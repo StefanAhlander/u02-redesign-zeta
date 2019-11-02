@@ -679,10 +679,23 @@ a:visited {
 
 /*** AKTUELLT END ***/
 
-footer {
-  background-color: $baseColor;
-  height: 100vh;
+/***  FOOTER ***/
+#fotter{
+  width:100%;
+  background-color: #425768;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3rem;
 }
+.column {
+  float:center;
+  width: 100%;
+  color:rgb(255, 255, 255);
+  border-bottom: solid; 
+  border-width: 1px;
+}
+/***  FOOTER END ***/
 
 /***  NYHETSRUM ***/
 #nyhetsrum h2 {
