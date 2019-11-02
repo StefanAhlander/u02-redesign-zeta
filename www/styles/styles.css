@@ -713,11 +713,25 @@ a:visited {
 }
 
 /*** AKTUELLT END ***/
-footer {
+/***  FOOTER ***/
+#fotter {
+  width: 100%;
   background-color: #425768;
-  height: 100vh;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3rem;
 }
 
+.column {
+  float: center;
+  width: 100%;
+  color: white;
+  border-bottom: solid;
+  border-width: 1px;
+}
+
+/***  FOOTER END ***/
 /***  NYHETSRUM ***/
 #nyhetsrum h2 {
   font-size: 1.5rem;
