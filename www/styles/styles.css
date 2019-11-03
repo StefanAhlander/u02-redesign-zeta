@@ -262,7 +262,7 @@ nav p,
 nav label {
   color: white;
   text-decoration: none;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 nav #main-menu li:first-child {
