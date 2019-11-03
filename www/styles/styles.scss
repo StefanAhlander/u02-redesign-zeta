@@ -763,6 +763,7 @@ a:visited {
 
 /*** ASIDE ***/
 aside {
+  margin-top: $verticalMarginBetweenElms;
 
   &>nav {
     background-color: $textColor;

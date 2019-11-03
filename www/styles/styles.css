@@ -784,6 +784,10 @@ a:visited {
 
 /***  NYHETSRUM END ***/
 /*** ASIDE ***/
+aside {
+  margin-top: 3rem;
+}
+
 aside > nav {
   background-color: #eee;
   border: 1px solid #425768;
