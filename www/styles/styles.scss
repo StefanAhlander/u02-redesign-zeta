@@ -78,6 +78,14 @@ span.pdf-icon {
   padding: 0 1rem;
 }
 
+main.wrapper {
+  margin-top: 0;
+}
+
+.wrapper>section {
+  margin: 3rem 0;
+}
+
 header.wrapper,
 nav>div.wrapper {
   margin: 0 auto;
@@ -418,18 +426,15 @@ nav {
     Also set negative z-index to have everything else move on top
     of the image. */
 #hero-image {
-  height: 569px;
-  margin: 3rem auto;
+  height: 620px;
+  margin: 2rem 0;
   width: 100%;
-  max-width: 1248px;
   position: relative;
-  overflow: hidden;
-  z-index: -2;
-
+  z-index: -1;
 
   #hero-inner {
-    background-image: url(../images/brooke-cagle-g1Kr4Ozfoac-unsplash-large.jpg);
-    transform: translateZ(-1px) scale(1.5) translateY(-10px) translateX(-4px);
+    background-image: url(../images/brooke-cagle-wide.jpg);
+    transform: translateZ(-1px) scale(1.51);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -444,13 +449,12 @@ nav {
   #hero-image {
     height: 569px;
     margin: 2rem auto 0;
-    max-width: 1248px;
+    width: 100%;
     position: relative;
-    transform: none;
-    z-index: -2;
+    z-index: -1;
 
     #hero-inner {
-      background-image: url(../images/brooke-cagle-g1Kr4Ozfoac-unsplash-large.jpg);
+      background-image: url(../images/brooke-cagle-wide.jpg);
       transform: none;
       position: absolute;
       top: 0;
@@ -459,10 +463,6 @@ nav {
       right: 0;
     }
   }
-}
-
-main.wrapper {
-  padding-top: 1rem;
 }
 
 #container-cards {
@@ -558,8 +558,8 @@ div .card-box:hover h3 {
 
 .aktuellt>h2 {
   display: block;
-  margin: 20px auto;
-  font-size: 40px;
+  margin: 0 auto 1rem;
+  font-size: 2.5rem;
 }
 
 .aktuellt-card {
