@@ -1312,7 +1312,8 @@ input[type=submit]:hover {
 
 /*** STATISTIK ***/
 #statistik,
-#lagar {
+#lagar,
+#om-oss {
   h2 {
     font-size: $headingSizeMainPageheading;
     margin: 0 auto 3rem;
@@ -1513,3 +1514,51 @@ input[type=submit]:hover {
 #nyhetsrum-event {
   width: 98%;
 }
+
+#om-oss section {
+  width: 100%;
+  max-width: 40rem;
+ }
+ #omoss-image {
+  margin-bottom: 1rem;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+ }
+
+/*** Om OSS ***/
+
+#om-oss section {
+  width: 100%;
+  max-width: 40rem;
+ }
+ #omoss-image {
+  margin-bottom: 1rem;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+ }
+ #om-oss-box {
+  position: relative;
+  z-index: 1;
+ }
+ #om-oss-box>.newarrow {
+  position: absolute;
+  z-index: 2;
+  right: 20rem;
+ }
+ .omoss-video {
+  max-width: 640;
+  margin-bottom: 1rem 0 1rem 0;
+  width: 100%;
+  height: 360px;
+ }
+ @media screen and (max-width: 700px) {
+  .om-ossvideo {
+    height: 260px;
+  }
+ }
+
+ /*** OM OSS END ***/
