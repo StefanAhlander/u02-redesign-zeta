@@ -882,6 +882,8 @@ aside > nav li:hover a {
   background-color: #526b81;
   color: white;
   padding: 0.5rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #pub-filter {

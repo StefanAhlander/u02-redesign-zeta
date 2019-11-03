@@ -867,6 +867,8 @@ aside {
   background-color: $baseColor-lighter;
   color: white;
   padding: $topAndBottomPaddingSmallTextbox;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #pub-filter {

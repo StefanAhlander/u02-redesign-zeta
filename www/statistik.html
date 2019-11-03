@@ -26,7 +26,7 @@
 
             <h1>Myndigheten för<br />yrkeshögskolan</h1>
 
-            <form role="search">
+            <form id="search-desktop" class="search-box" role="search">
                 <input type="search" placeholder="Sök på webbplatsen"
                     aria-label="Sök på hela webbplatsen" size="20">
                 <button class="btn" type="submit">Sök</button>
@@ -34,7 +34,7 @@
 
         </header>
 
-        <nav>
+        <nav aria-label="Main">
             <div class="wrapper">
                 <input id="menu-toggle" type="checkbox" />
 
@@ -114,20 +114,12 @@
                     </li>
                     <li><a href="kontakt.html">Kontakt</a>
                     </li>
-                    <li>
-                        Mer
-                        <ul>
-                            <li><a href="omoss.html">Om oss</a></li>
-                            <li><a href="#">Organisation</a></li>
-                            <li><a href="#">Så styrs myndigheten</a></li>
-                            <li><a href="#">Redovisning av verksamheten</a></li>
-                            <li><a href="#">MYH fyller 10 år!</a></li>
-                            <li><a href="#">Remissvar och yttranden</a></li>
-                            <li><a href="#">Pågående upphandlingar</a></li>
-                            <li><a href="#">Fakturera oss</a></li>
-                            <li><a href="#">Jobba hos oss</a></li>
-                            <li><a href="#">Behandling av personuppgifter</a></li>
-                        </ul>
+                    <li id="search-mobile">
+                        <form class="search-box" role="search">
+                            <input type="search" placeholder="Sök på webbplatsen"
+                                aria-label="Sök på hela webbplatsen" size="20">
+                            <button class="btn" type="submit">Sök</button>
+                        </form>
                     </li>
                 </ul>
             </div>
@@ -209,45 +201,46 @@
         <footer>
             <div id="fotter">
                 <div class="row">
-                  <div class="column"><br>
-                    <h4>Telefon</h4> 
-                    <p>Ring vår växel 010-209 01 00
-                      Växeln är öppen vardagar 8.00 - 17.00</p>
-                  </div>
-                  <div class="column">
-                    <br>
-                    <h4>Digitalt kundforum</h4>
-                    <p>Se vanliga frågor och svar eller ställ frågor: <a
-                        href="https://forum.myh.se/org/myndigheten-for-yrkeshogskola/">forum.myh.se</a>
-                  </div>
-                  <div class="column"><br>
-                    <h4>E-post</h4>
-                    <p>Allmänna frågor/synpunkter: info@myh.se
-                      Registrator: registrator@myh.se</p>
-                  </div>
-                  <div class="column"><br>
-                    <h4>Adress</h4>
-                    <p>Myndigheten för yrkeshögskolan
-                      Box 145
-                      72105 Västerås</p>
+                    <div class="column"><br>
+                        <h4>Telefon</h4>
+                        <p>Ring vår växel 010-209 01 00
+                            Växeln är öppen vardagar 8.00 - 17.00</p>
                     </div>
-                  <div class="column"><br>
-                  <h4>Om webbplatsen</h4>
-                  <p>Använda webbplatsen 
-                  <br> 
-                  Om Webbkakor Webbkarta</p>
-                  </div>
-                  <div class="column"><br>
-                    <h4>Våra övriga webbplatser</h4>
-                    <p>www.yrkeshogskolan.se <br>www.konstkulturutbildning.se<br>www.blitolk.nu<br>www.seqf.se</p>
-                  </div>
-                  <div class="column"><br>
-                    <h4>Ansvarig utgivare</h4>
-                    <p>Thomas Persson, generaldirektör MYH.</p>
-                  </div>
-        
-         </div>
-         </div>
+                    <div class="column">
+                        <br>
+                        <h4>Digitalt kundforum</h4>
+                        <p>Se vanliga frågor och svar eller ställ frågor: <a
+                                href="https://forum.myh.se/org/myndigheten-for-yrkeshogskola/">forum.myh.se</a>
+                    </div>
+                    <div class="column"><br>
+                        <h4>E-post</h4>
+                        <p>Allmänna frågor/synpunkter: info@myh.se
+                            Registrator: registrator@myh.se</p>
+                    </div>
+                    <div class="column"><br>
+                        <h4>Adress</h4>
+                        <p>Myndigheten för yrkeshögskolan
+                            Box 145
+                            72105 Västerås</p>
+                    </div>
+                    <div class="column"><br>
+                        <h4>Om webbplatsen</h4>
+                        <p>Använda webbplatsen
+                            <br>
+                            Om Webbkakor Webbkarta</p>
+                    </div>
+                    <div class="column"><br>
+                        <h4>Våra övriga webbplatser</h4>
+                        <p>www.yrkeshogskolan.se
+                            <br>www.konstkulturutbildning.se<br>www.blitolk.nu<br>www.seqf.se</p>
+                    </div>
+                    <div class="column"><br>
+                        <h4>Ansvarig utgivare</h4>
+                        <p>Thomas Persson, generaldirektör MYH.</p>
+                    </div>
+
+                </div>
+            </div>
         </footer>
     </div>
 
