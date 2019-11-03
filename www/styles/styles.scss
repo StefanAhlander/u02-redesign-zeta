@@ -115,8 +115,9 @@ main.two-column-display {
 
     &>aside {
       flex: 0 0 auto;
-      margin: -2rem 0 0;
+      margin: 2rem 0 -4rem;
       width: 100%;
+      max-width: 100%;
     }
   }
 }
