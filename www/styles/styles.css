@@ -1207,7 +1207,7 @@ aside > nav li:hover a {
 
 .pub-list-card {
   background-color: white;
-  height: 200px;
+  height: 300px;
   margin: 2rem 0;
   width: 100%;
 }
@@ -1219,19 +1219,30 @@ aside > nav li:hover a {
 }
 
 .pub-list-img {
-  background-image: url(../images/aktuellt-1.jpg);
-  background-size: cover;
   float: left;
-  width: 200px;
+  width: 212px;
 }
 
 .pub-list-text {
   padding: 1rem;
-  width: calc(100% - 200px);
+  width: calc(100% - 212px);
+}
+
+.pub-list-text h3 {
+  margin-bottom: 1rem;
 }
 
 .pub-list-text .pub-year {
   color: darkgray;
+}
+
+.pub-list-text a {
+  color: #0000ee;
+  text-decoration: none;
+}
+
+.pub-list-text a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 800px) {
@@ -1269,10 +1280,10 @@ aside > nav li:hover a {
     width: 100%;
   }
   .pub-list-img {
-    background-image: url(../images/aktuellt-1.jpg);
-    background-size: cover;
     float: none;
-    height: 200px;
+    height: 300px;
+    width: auto;
+    margin: 0 auto;
   }
   .pub-list-text {
     padding: 1rem;
