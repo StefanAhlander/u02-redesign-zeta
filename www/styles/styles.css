@@ -623,11 +623,8 @@ div .card-box:hover h3 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  /*height: fit-content;*/
   margin: 0 auto;
   margin-bottom: 2rem;
-  /*box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);*/
-  /*box-shadow: 5px 5px 5px 5px #cfcfcf;*/
 }
 
 .aktuellt-card a {
@@ -654,7 +651,7 @@ a:visited {
 }
 
 .aktuellt-card div:nth-child(2) {
-  /*width: 60%;*/
+  width: 60%;
   margin: auto;
   padding: 1rem;
 }
@@ -698,7 +695,6 @@ a:visited {
 .card-img-1, .card-img-2, .card-img-3, .card-img-4
 , .card-img-5, .card-img-6, .card-img-7, .card-img-8
 , .card-img-9 {
-
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -706,8 +702,6 @@ a:visited {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  /*  min-height: 100%; */
-  /*  min-width: 500px; */
 }
 
 @media screen and (max-width: 950px) {
@@ -731,6 +725,7 @@ a:visited {
     height: 50vw;
     min-width: 0;
     min-height: 1px;
+    min-height: 1px;
   }
   #nyhetsrum-pressmeddelanden .aktuellt-card {
     -webkit-box-orient: vertical;
@@ -739,7 +734,6 @@ a:visited {
             flex-direction: column;
   }
   #nyhetsrum-pressmeddelanden .card-img-1, #nyhetsrum-pressmeddelanden .card-img-2, #nyhetsrum-pressmeddelanden .card-img-3 {
-    background-size: 100% 100%;
     height: 50vw;
     max-height: 400px;
   }
@@ -749,96 +743,171 @@ a:visited {
   }
 }
 
-/*** AKTUELLT NYHETSRUM ***/
-#nyhetsrum-aktuellt .aktuellt-card {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#nyhetsrum-aktuellt .card-img-1, #nyhetsrum-aktuellt .card-img-2, #nyhetsrum-aktuellt .card-img-3 {
-  background-size: 100% 100%;
-  height: 50vw;
-  max-height: 400px;
-}
-
-#nyhetsrum-aktuellt .aktuellt-card div:nth-child(1) {
-  width: 100%;
-  height: 50vw;
-}
-
-/*** PRESSMEDDELANDEN NYHETSRUM ***/
-#nyhetsrum-pressmeddelanden .aktuellt-card {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#nyhetsrum-pressmeddelanden .card-img-1, #nyhetsrum-pressmeddelanden .card-img-2, #nyhetsrum-pressmeddelanden .card-img-3 {
-  background-size: 100% 100%;
-  height: 50vw;
-  max-height: 400px;
-}
-
-#nyhetsrum-pressmeddelanden .aktuellt-card div:nth-child(1) {
-  width: 100%;
-  height: 50vw;
-  max-height: 400px;
-}
-
-/*
-
-#nyhetsrum-aktuellt {
-
-  .aktuellt-card {
-    width: 100%;
-    flex-direction: row;
-  }
-
-  .aktuellt-card div:nth-child(2) {
-    margin: auto;
-    width: 100%;
-    padding: 1rem;
-    height: fit-content;
-  }
-  
-  .aktuellt-card div:nth-child(1) {
-    width: 100%;
-    max-height: 400px;
-    min-width: 0;
-    min-height: 1px; 
-    background-size: cover;
-
-}
-
-
-/*
-#nyhetsrum-aktuellt .aktuellt-card {
-  width: 100%;
-  flex-direction: column;
-}
-
-
-#nyhetsrum-aktuellt .aktuellt-card div:nth-child(1) {
-
-  
-
-}  
-
-#nyhetsrum-aktuellt .card-img-1, .card-img-2, .card-img-3 {
-
-  
-  
-  width: 100%;
-  height: 50vw;
-  max-height: 400px;
-  min-height: 1px;
-  min-width: 1px;
-}
-*/
 /*** AKTUELLT END ***/
+/***  EXTERN LINKS ***/
+.extern-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 3rem auto;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .extern-links-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto;
+  }
+}
+
+.extern-links-container .extern-links {
+  margin: auto;
+  width: 300px;
+  height: 277px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .extern-links-container .extern-links {
+    margin-bottom: 20px;
+  }
+}
+
+.extern-links-container .extern-links .link-images {
+  margin: 0 auto;
+  overflow: hidden;
+  max-height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.extern-links-container .extern-links .link-images .link-logo {
+  max-width: 90%;
+  margin: auto;
+}
+
+.extern-links-container .extern-links #epale-logo {
+  padding-top: 6px;
+}
+
+.extern-links-container .extern-links .divlink {
+  height: 20%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.extern-links-container .extern-links .divlink :hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.extern-links-container .extern-links .divlink h5 {
+  font-size: 1em;
+  text-align: center;
+  position: relative;
+  top: 20%;
+}
+
+.extern-links-container .extern-links .divlink h5 .right-arrow {
+  border: solid #425768;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin: 0 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.extern-links-container .extern-links .divlink a {
+  text-decoration: none;
+  color: #425768;
+}
+
+/*** EXTERN LINKS END ***/
+/*** VERKSAMHETSOMRADEN ***/
+#main-verksamhet {
+  margin: auto;
+  max-width: 1165px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 10px 10px;
+}
+
+#main-verksamhet #intro-text {
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+#main-verksamhet #intro-text p {
+  color: #3d3e40;
+  padding-top: 10px;
+}
+
+#main-verksamhet .card {
+  width: 360px;
+  height: 342px;
+  margin: 30px auto;
+}
+
+#main-verksamhet .card .card-image {
+  overflow: hidden;
+  height: 58%;
+}
+
+#main-verksamhet .card .card-image img {
+  width: 100%;
+}
+
+#main-verksamhet .card .card-image :hover {
+  opacity: 0.5;
+}
+
+#main-verksamhet .card .card-text {
+  background-color: white;
+  padding: 10px;
+  height: 42%;
+}
+
+#main-verksamhet .card .card-text p {
+  color: #3d3e40;
+}
+
+#main-verksamhet .card .card-text h4:hover {
+  text-decoration: underline;
+}
+
+#main-verksamhet .card .card-text h4 {
+  padding: 8px 0;
+}
+
+#main-verksamhet .card a {
+  text-decoration: none;
+  color: #3d3e40;
+}
+
+/*** VERKSAMHETSOMRADEN END ***/
 /***  FOOTER ***/
 #fotter {
   width: 100%;
