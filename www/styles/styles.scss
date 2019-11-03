@@ -78,6 +78,14 @@ span.pdf-icon {
   padding: 0 1rem;
 }
 
+main.wrapper {
+  margin-top: 0;
+}
+
+.wrapper>section {
+  margin: 3rem 0;
+}
+
 header.wrapper,
 nav>div.wrapper {
   margin: 0 auto;
@@ -107,8 +115,9 @@ main.two-column-display {
 
     &>aside {
       flex: 0 0 auto;
-      margin: -2rem 0 0;
+      margin: 2rem 0 -4rem;
       width: 100%;
+      max-width: 100%;
     }
   }
 }
@@ -145,32 +154,8 @@ header {
     }
   }
 
-  form {
-    bottom: 1rem;
-    right: 1rem;
-    position: absolute;
-
-    input {
-      font-size: 1rem;
-      background-image: url("../images/icon-search.svg");
-      background-repeat: no-repeat;
-      background-size: 1rem;
-      background-position: right 0.5rem center;
-      padding: 0.2rem 0.5rem;
-    }
-
-    button {
-      background-color: $baseColor;
-      border: 2px solid $baseColor;
-      color: $textColor;
-      font-size: 1rem;
-      padding: 0.2rem 0.5rem;
-      margin-left: -0.4rem;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
+  #search-desktop {
+    display: block;
   }
 
   @media screen and (max-width: 700px) {
@@ -188,8 +173,54 @@ header {
       text-align: center;
     }
 
+    img {
+      width: 36%;
+    }
+
+    h1 {
+      font-size: 1rem;
+    }
+
     ul {
       margin-top: 0;
+    }
+
+    #search-desktop {
+      display: none;
+    }
+  }
+}
+
+#search-desktop {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+}
+
+.search-box {
+  position: relative;
+
+  input {
+    font-size: 1rem;
+    background-image: url("../images/icon-search.svg");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: right 0.5rem center;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    width: 12rem;
+  }
+
+  button {
+    background-color: $baseColor;
+    border: 2px solid gray;
+    color: $textColor;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    margin-left: -0.4rem;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
@@ -200,6 +231,11 @@ nav {
   clear: right;
   font-size: 1rem;
   position: relative;
+
+
+  #search-mobile {
+    display: none;
+  }
 
   /* For larger vieports hide mobile navigation elements. */
   #hamburger-container,
@@ -307,9 +343,14 @@ nav {
       z-index: 1;
     }
 
+
+    #search-mobile {
+      display: block;
+    }
+
     /*  Position a transparent checkbox to accept "clicks" to expand
         the menu. */
-    input {
+    #menu-toggle {
       cursor: pointer;
       display: inline-block;
       height: 2rem;
@@ -384,7 +425,7 @@ nav {
       left: -414px;
       opacity: 0;
       position: absolute;
-      top: 2.4rem;
+      top: 2.3rem;
       transition: all 0.5s ease-in-out;
     }
 
@@ -418,40 +459,32 @@ nav {
     Also set negative z-index to have everything else move on top
     of the image. */
 #hero-image {
-  height: 569px;
-  margin: 0 auto 1rem;
-  max-width: 1248px;
+  height: 620px;
+  margin: 2rem 0;
+  width: 100%;
   position: relative;
-  transform: translateZ(-1.5px) scale(1.595) translateX(-4rem) translateY(-2rem);
-  z-index: -2;
+  z-index: -1;
 
-  picture {
-    width: 100%;
+  #hero-inner {
+    background-image: url(../images/brooke-cagle-wide.jpg);
+    transform: translateZ(-1px) scale(1.51);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
+}
 
-  @media screen and (max-width: 828px) {
-    height: 569px;
-    margin: 0 auto 6rem;
-    width: 100%;
-    transform: translateZ(-1.5px) scale(1.6) translateX(-1rem) translateY(-1.5rem);
-  }
+@media screen and (max-width: 700px) {
+  #hero-image {
+    height: 550px;
+    margin-top: 3rem;
 
-  @media screen and (max-width: 768px) {
-    height: 569px;
-    margin: 0 auto 6rem;
-    transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(-1.5rem);
-  }
-
-  @media screen and (max-width: 704px) {
-    height: 569px;
-    margin: 0 auto 6rem;
-    transform: translateZ(-1.5px) scale(1.6) translateX(-2.4rem) translateY(3rem);
-  }
-
-  @media screen and (max-width: 414px) {
-    height: 569px;
-    margin: 0 auto -10rem;
-    transform: translateZ(-1.5px) scale(1) translateX(-10rem) translateY(-1.5rem);
+    #hero-inner {
+      background-image: url(../images/brooke-cagle-g1Kr4Ozfoac-unsplash-small.jpg);
+      transform: translateZ(-1px) scale(1.51) translateY(40px);
+    }
   }
 }
 
@@ -461,48 +494,27 @@ nav {
   #hero-image {
     height: 569px;
     margin: 2rem auto 0;
-    max-width: 1248px;
+    width: 100%;
     position: relative;
-    transform: none;
-    z-index: -2;
+    z-index: -1;
 
-    picture,
-    img {
-      width: 100%;
-    }
-
-    @media screen and (max-width: 828px) {
-      margin: 0 auto 1rem;
-      width: 100%;
+    #hero-inner {
+      background-image: url(../images/brooke-cagle-wide.jpg);
       transform: none;
-    }
-
-    @media screen and (max-width: 768px) {
-      margin: 0 auto 1rem;
-      transform: none;
-    }
-
-    @media screen and (max-width: 704px) {
-      margin: 0 auto 1rem;
-      transform: none;
-    }
-
-    @media screen and (max-width: 414px) {
-      margin: 0 auto 1rem;
-      transform: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
-}
-
-main.wrapper {
-  padding-top: 1rem;
 }
 
 #container-cards {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: -4rem auto 0;
+  margin: 0rem auto 0;
   width: 100%;
   max-width: 1248px;
 }
@@ -510,7 +522,7 @@ main.wrapper {
 .card-box {
   position: relative;
   background-color: #cbf6e3;
-  width: 32%;
+  width: 31%;
   height: 215px;
   margin-bottom: 1rem;
 }
@@ -591,8 +603,8 @@ div .card-box:hover h3 {
 
 .aktuellt>h2 {
   display: block;
-  margin: 20px auto;
-  font-size: 40px;
+  margin: 0 auto 1rem;
+  font-size: 2.5rem;
 }
 
 .aktuellt-card {
@@ -680,21 +692,23 @@ a:visited {
 /*** AKTUELLT END ***/
 
 /***  FOOTER ***/
-#fotter{
-  width:100%;
+#fotter {
+  width: 100%;
   background-color: #425768;
   text-align: center;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 3rem;
 }
+
 .column {
-  float:center;
+  float: center;
   width: 100%;
-  color:rgb(255, 255, 255);
-  border-bottom: solid; 
+  color: rgb(255, 255, 255);
+  border-bottom: solid;
   border-width: 1px;
 }
+
 /***  FOOTER END ***/
 
 /***  NYHETSRUM ***/
@@ -782,6 +796,7 @@ a:visited {
 
 /*** ASIDE ***/
 aside {
+  margin-top: $verticalMarginBetweenElms;
 
   &>nav {
     background-color: $textColor;
@@ -852,6 +867,8 @@ aside {
   background-color: $baseColor-lighter;
   color: white;
   padding: $topAndBottomPaddingSmallTextbox;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 #pub-filter {
@@ -895,6 +912,10 @@ aside {
 .pub-list-text {
   padding: 1rem;
   width: calc(100% - 200px);
+
+  .pub-year {
+    color: darkgray;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -915,6 +936,34 @@ aside {
     }
   }
 
+  #publications-list {
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+
+  .pub-list-card {
+    background-color: white;
+    height: auto;
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  .pub-list-img,
+  .pub-list-text {
+    display: block;
+    width: 100%;
+  }
+
+  .pub-list-img {
+    background-image: url(../images/aktuellt-1.jpg);
+    background-size: cover;
+    float: none;
+    height: 200px;
+  }
+
+  .pub-list-text {
+    padding: 1rem;
+  }
 }
 
 /*** PUBLICATIONS END ***/
