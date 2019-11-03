@@ -460,13 +460,13 @@ nav {
     of the image. */
 #hero-image {
   height: 620px;
-  margin: 2rem 0;
+  margin: 2rem 0 -6.5rem;
   width: 100%;
   position: relative;
   z-index: -1;
+  transform-style: preserve-3d;
 
-  #hero-inner {
-    background-image: url(../images/brooke-cagle-wide.jpg);
+  img {
     transform: translateZ(-1px) scale(1.51);
     position: absolute;
     top: 0;
@@ -481,8 +481,7 @@ nav {
     height: 550px;
     margin-top: 3rem;
 
-    #hero-inner {
-      background-image: url(../images/brooke-cagle-g1Kr4Ozfoac-unsplash-small.jpg);
+    img {
       transform: translateZ(-1px) scale(1.51) translateY(40px);
     }
   }
@@ -493,19 +492,18 @@ nav {
 
   #hero-image {
     height: 569px;
-    margin: 2rem auto 0;
+    margin: 2rem auto 5rem;
     width: 100%;
     position: relative;
     z-index: -1;
 
-    #hero-inner {
-      background-image: url(../images/brooke-cagle-wide.jpg);
-      transform: none;
+    img {
       position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
+      transform: none;
     }
   }
 }
@@ -684,11 +682,17 @@ a:visited {
 
 
 
-.card-img-1, .card-img-2, .card-img-3, .card-img-4
-, .card-img-5, .card-img-6, .card-img-7, .card-img-8
-, .card-img-9 {
+.card-img-1,
+.card-img-2,
+.card-img-3,
+.card-img-4,
+.card-img-5,
+.card-img-6,
+.card-img-7,
+.card-img-8,
+.card-img-9 {
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   height: fit-content;
@@ -711,26 +715,29 @@ a:visited {
     width: 100%;
     height: 50vw;
     min-width: 0;
-    min-height: 1px; 
+    min-height: 1px;
     min-height: 1px;
   }
-  
+
   #nyhetsrum-pressmeddelanden {
 
-    .aktuellt-card{
+    .aktuellt-card {
       flex-direction: column;
     }
-    .card-img-1, .card-img-2, .card-img-3 {
+
+    .card-img-1,
+    .card-img-2,
+    .card-img-3 {
       height: 50vw;
       max-height: 400px;
     }
-  
+
     .aktuellt-card div:nth-child(1) {
       width: 100%;
       height: 50vw;
     }
   }
-} 
+}
 
 /*** AKTUELLT END ***/
 
@@ -824,57 +831,58 @@ a:visited {
   padding: 10px 10px;
 
   #intro-text {
-      padding: 10px;
-      font-size: 1.3em;
+    padding: 10px;
+    font-size: 1.3em;
 
-      p {
-          color: #3d3e40;
-          padding-top: 10px;
-      }
+    p {
+      color: #3d3e40;
+      padding-top: 10px;
+    }
   }
 
   .card {
-      width: 360px;
-      height: 342px;
-      margin: 30px auto;
-  
-      .card-image {
-          overflow: hidden;
-          height: 58%;
-      
-          img {
-              width: 100%;
-          }
+    width: 360px;
+    height: 342px;
+    margin: 30px auto;
 
-          :hover {
-              opacity: 0.5;
-          }
-      }
-      
-      .card-text {
-          background-color: white;
-          padding: 10px;
-          height: 42%;
+    .card-image {
+      overflow: hidden;
+      height: 58%;
 
-          p {
-              color: #3d3e40;
-          }
-
-          h4:hover {
-                  text-decoration: underline;
-              }
-
-          h4 {
-              padding: 8px 0;
-          }
+      img {
+        width: 100%;
       }
 
-      a {
-          text-decoration: none;
-          color: #3d3e40;
+      :hover {
+        opacity: 0.5;
       }
+    }
+
+    .card-text {
+      background-color: white;
+      padding: 10px;
+      height: 42%;
+
+      p {
+        color: #3d3e40;
+      }
+
+      h4:hover {
+        text-decoration: underline;
+      }
+
+      h4 {
+        padding: 8px 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #3d3e40;
+    }
   }
 }
+
 /*** VERKSAMHETSOMRADEN END ***/
 
 /***  FOOTER ***/

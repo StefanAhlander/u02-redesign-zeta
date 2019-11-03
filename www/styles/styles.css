@@ -450,14 +450,15 @@ nav li > ul > li:hover {
     of the image. */
 #hero-image {
   height: 620px;
-  margin: 2rem 0;
+  margin: 2rem 0 -6.5rem;
   width: 100%;
   position: relative;
   z-index: -1;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
-#hero-image #hero-inner {
-  background-image: url(../images/brooke-cagle-wide.jpg);
+#hero-image img {
   -webkit-transform: translateZ(-1px) scale(1.51);
           transform: translateZ(-1px) scale(1.51);
   position: absolute;
@@ -472,8 +473,7 @@ nav li > ul > li:hover {
     height: 550px;
     margin-top: 3rem;
   }
-  #hero-image #hero-inner {
-    background-image: url(../images/brooke-cagle-g1Kr4Ozfoac-unsplash-small.jpg);
+  #hero-image img {
     -webkit-transform: translateZ(-1px) scale(1.51) translateY(40px);
             transform: translateZ(-1px) scale(1.51) translateY(40px);
   }
@@ -483,20 +483,19 @@ nav li > ul > li:hover {
 @supports (-ms-ime-align: auto) {
   #hero-image {
     height: 569px;
-    margin: 2rem auto 0;
+    margin: 2rem auto 5rem;
     width: 100%;
     position: relative;
     z-index: -1;
   }
-  #hero-image #hero-inner {
-    background-image: url(../images/brooke-cagle-wide.jpg);
-    -webkit-transform: none;
-            transform: none;
+  #hero-image img {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 
@@ -692,9 +691,15 @@ a:visited {
   background-image: url(../images/aktuellt-9.jpg);
 }
 
-.card-img-1, .card-img-2, .card-img-3, .card-img-4
-, .card-img-5, .card-img-6, .card-img-7, .card-img-8
-, .card-img-9 {
+.card-img-1,
+.card-img-2,
+.card-img-3,
+.card-img-4,
+.card-img-5,
+.card-img-6,
+.card-img-7,
+.card-img-8,
+.card-img-9 {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -733,7 +738,9 @@ a:visited {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #nyhetsrum-pressmeddelanden .card-img-1, #nyhetsrum-pressmeddelanden .card-img-2, #nyhetsrum-pressmeddelanden .card-img-3 {
+  #nyhetsrum-pressmeddelanden .card-img-1,
+  #nyhetsrum-pressmeddelanden .card-img-2,
+  #nyhetsrum-pressmeddelanden .card-img-3 {
     height: 50vw;
     max-height: 400px;
   }
