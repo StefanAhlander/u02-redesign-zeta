@@ -145,32 +145,8 @@ header ul li:first-of-type {
   border-left: none;
 }
 
-header form {
-  bottom: 1rem;
-  right: 1rem;
-  position: absolute;
-}
-
-header form input {
-  font-size: 1rem;
-  background-image: url("../images/icon-search.svg");
-  background-repeat: no-repeat;
-  background-size: 1rem;
-  background-position: right 0.5rem center;
-  padding: 0.2rem 0.5rem;
-}
-
-header form button {
-  background-color: #425768;
-  border: 2px solid #425768;
-  color: #eee;
-  font-size: 1rem;
-  padding: 0.2rem 0.5rem;
-  margin-left: -0.4rem;
-}
-
-header form button:hover {
-  cursor: pointer;
+header #search-desktop {
+  display: block;
 }
 
 @media screen and (max-width: 700px) {
@@ -186,9 +162,52 @@ header form button:hover {
     right: 0;
     text-align: center;
   }
+  header img {
+    width: 36%;
+  }
+  header h1 {
+    font-size: 1rem;
+  }
   header ul {
     margin-top: 0;
   }
+  header #search-desktop {
+    display: none;
+  }
+}
+
+#search-desktop {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  font-size: 1rem;
+  background-image: url("../images/icon-search.svg");
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: right 0.5rem center;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  width: 12rem;
+}
+
+.search-box button {
+  background-color: #425768;
+  border: 2px solid gray;
+  color: #eee;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  margin-left: -0.4rem;
+}
+
+.search-box button:hover {
+  cursor: pointer;
 }
 
 nav {
@@ -203,6 +222,10 @@ nav {
   /*  On hover or keyboard-focus expand sub-menu. Doesn't work on IE/Edge 
       and must therefore be seens as an enhancement not a feature. */
   /*  Position last sub-menu so it doesn't appear off screen. */
+}
+
+nav #search-mobile {
+  display: none;
 }
 
 nav #hamburger-container,
@@ -326,7 +349,10 @@ nav li > ul > li:hover {
     vertical-align: -0.3rem;
     z-index: 1;
   }
-  nav input {
+  nav #search-mobile {
+    display: block;
+  }
+  nav #menu-toggle {
     cursor: pointer;
     display: inline-block;
     height: 2rem;
@@ -394,7 +420,7 @@ nav li > ul > li:hover {
     left: -414px;
     opacity: 0;
     position: absolute;
-    top: 2.4rem;
+    top: 2.3rem;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
   }

@@ -153,32 +153,8 @@ header {
     }
   }
 
-  form {
-    bottom: 1rem;
-    right: 1rem;
-    position: absolute;
-
-    input {
-      font-size: 1rem;
-      background-image: url("../images/icon-search.svg");
-      background-repeat: no-repeat;
-      background-size: 1rem;
-      background-position: right 0.5rem center;
-      padding: 0.2rem 0.5rem;
-    }
-
-    button {
-      background-color: $baseColor;
-      border: 2px solid $baseColor;
-      color: $textColor;
-      font-size: 1rem;
-      padding: 0.2rem 0.5rem;
-      margin-left: -0.4rem;
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
+  #search-desktop {
+    display: block;
   }
 
   @media screen and (max-width: 700px) {
@@ -196,8 +172,54 @@ header {
       text-align: center;
     }
 
+    img {
+      width: 36%;
+    }
+
+    h1 {
+      font-size: 1rem;
+    }
+
     ul {
       margin-top: 0;
+    }
+
+    #search-desktop {
+      display: none;
+    }
+  }
+}
+
+#search-desktop {
+  bottom: 1rem;
+  right: 1rem;
+  position: absolute;
+}
+
+.search-box {
+  position: relative;
+
+  input {
+    font-size: 1rem;
+    background-image: url("../images/icon-search.svg");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position: right 0.5rem center;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    width: 12rem;
+  }
+
+  button {
+    background-color: $baseColor;
+    border: 2px solid gray;
+    color: $textColor;
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    margin-left: -0.4rem;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 }
@@ -208,6 +230,11 @@ nav {
   clear: right;
   font-size: 1rem;
   position: relative;
+
+
+  #search-mobile {
+    display: none;
+  }
 
   /* For larger vieports hide mobile navigation elements. */
   #hamburger-container,
@@ -315,9 +342,14 @@ nav {
       z-index: 1;
     }
 
+
+    #search-mobile {
+      display: block;
+    }
+
     /*  Position a transparent checkbox to accept "clicks" to expand
         the menu. */
-    input {
+    #menu-toggle {
       cursor: pointer;
       display: inline-block;
       height: 2rem;
@@ -392,7 +424,7 @@ nav {
       left: -414px;
       opacity: 0;
       position: absolute;
-      top: 2.4rem;
+      top: 2.3rem;
       transition: all 0.5s ease-in-out;
     }
 
