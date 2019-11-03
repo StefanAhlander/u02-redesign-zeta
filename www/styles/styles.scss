@@ -460,7 +460,7 @@ nav {
     of the image. */
 #hero-image {
   height: 620px;
-  margin: 2rem 0 -6.5rem;
+  margin: 2rem 0 2rem;
   width: 100%;
   position: relative;
   z-index: -1;
@@ -507,6 +507,8 @@ nav {
     }
   }
 }
+
+/*** CONTAINER-CARDS ***/
 
 #container-cards {
   display: flex;
@@ -586,6 +588,94 @@ div .card-box:hover h3 {
   }
 }
 
+/*** CONTAINER-CARDS END ***/
+
+/*** STUDENT CARD ***/
+
+#student-card {
+  background-color: rgb(255, 204, 212);
+
+
+  .stud-card-img {
+    display: inline-block;
+    height: 215px;
+    vertical-align: top;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .stud-card-text {
+    display: inline-block;
+    margin-left: 4rem;
+    padding: 2rem;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .stud-right-arrow {
+      background-image: url(../images/icon-arrow-right.svg);
+      background-size: cover;
+      content: " ";
+      display: inline-block;
+      height: 1.5rem;
+      vertical-align: -0.4rem;
+      width: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .stud-card-img {
+      height: 215px;
+      width: 40%;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .stud-card-text {
+      margin-left: 0;
+      padding: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .stud-card-img {
+      display: block;
+      height: auto;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .stud-card-text {
+      display: block;
+      margin-left: 0;
+      padding: 2rem;
+    }
+  }
+}
+
+/*** STUDENT CARD END ***/
+
+
 /*** AKTUELLT ***/
 .aktuellt {
 
@@ -596,7 +686,6 @@ div .card-box:hover h3 {
   flex-direction: column;
   justify-content: space-evenly;
   border-radius: 1rem;
-
 }
 
 .aktuellt>h2 {
