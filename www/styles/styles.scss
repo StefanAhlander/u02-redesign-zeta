@@ -1248,10 +1248,10 @@ aside {
   }
 
   .pub-list-img {
-    background-image: url(../images/aktuellt-1.jpg);
-    background-size: cover;
     float: none;
-    height: 200px;
+    height: 300px;
+    width: auto;
+    margin: 0 auto;
   }
 
   .pub-list-text {
