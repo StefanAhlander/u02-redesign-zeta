@@ -933,6 +933,10 @@ aside > nav li:hover a {
   width: calc(100% - 200px);
 }
 
+.pub-list-text .pub-year {
+  color: darkgray;
+}
+
 @media screen and (max-width: 800px) {
   main#publikationer {
     margin-top: 1rem;
@@ -951,6 +955,30 @@ aside > nav li:hover a {
     font-size: 1rem;
     margin: 1rem auto;
     text-align: center;
+  }
+  #publications-list {
+    max-width: 100%;
+    margin: 2rem 0;
+  }
+  .pub-list-card {
+    background-color: white;
+    height: auto;
+    margin: 2rem 0;
+    width: 100%;
+  }
+  .pub-list-img,
+  .pub-list-text {
+    display: block;
+    width: 100%;
+  }
+  .pub-list-img {
+    background-image: url(../images/aktuellt-1.jpg);
+    background-size: cover;
+    float: none;
+    height: 200px;
+  }
+  .pub-list-text {
+    padding: 1rem;
   }
 }
 
