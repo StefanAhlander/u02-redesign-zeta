@@ -443,6 +443,18 @@ nav {
   }
 }
 
+@media screen and (max-width: 700px) {
+  #hero-image {
+    height: 550px;
+    margin-top: 3rem;
+
+    #hero-inner {
+      background-image: url(../images/brooke-cagle-g1Kr4Ozfoac-unsplash-small.jpg);
+      transform: translateZ(-1px) scale(1.51) translateY(40px);
+    }
+  }
+}
+
 /*  On Edge Fix background image to avoid jittering on scroll. */
 @supports (-ms-ime-align:auto) {
 
@@ -647,21 +659,23 @@ a:visited {
 /*** AKTUELLT END ***/
 
 /***  FOOTER ***/
-#fotter{
-  width:100%;
+#fotter {
+  width: 100%;
   background-color: #425768;
   text-align: center;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 3rem;
 }
+
 .column {
-  float:center;
+  float: center;
   width: 100%;
-  color:rgb(255, 255, 255);
-  border-bottom: solid; 
+  color: rgb(255, 255, 255);
+  border-bottom: solid;
   border-width: 1px;
 }
+
 /***  FOOTER END ***/
 
 /***  NYHETSRUM ***/

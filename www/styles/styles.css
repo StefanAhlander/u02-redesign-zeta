@@ -440,6 +440,18 @@ nav li > ul > li:hover {
   right: 0;
 }
 
+@media screen and (max-width: 700px) {
+  #hero-image {
+    height: 550px;
+    margin-top: 3rem;
+  }
+  #hero-image #hero-inner {
+    background-image: url(../images/brooke-cagle-g1Kr4Ozfoac-unsplash-small.jpg);
+    -webkit-transform: translateZ(-1px) scale(1.51) translateY(40px);
+            transform: translateZ(-1px) scale(1.51) translateY(40px);
+  }
+}
+
 /*  On Edge Fix background image to avoid jittering on scroll. */
 @supports (-ms-ime-align: auto) {
   #hero-image {
