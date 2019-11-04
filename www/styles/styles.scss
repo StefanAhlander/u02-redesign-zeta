@@ -1173,7 +1173,7 @@ aside {
 
 .pub-list-card {
   background-color: white;
-  height: 200px;
+  height: 300px;
   margin: 2rem 0;
   width: 100%;
 }
@@ -1185,18 +1185,29 @@ aside {
 }
 
 .pub-list-img {
-  background-image: url(../images/aktuellt-1.jpg);
-  background-size: cover;
   float: left;
-  width: 200px;
+  width: 212px;
 }
 
 .pub-list-text {
   padding: 1rem;
-  width: calc(100% - 200px);
+  width: calc(100% - 212px);
+
+  h3 {
+    margin-bottom: 1rem;
+  }
 
   .pub-year {
     color: darkgray;
+  }
+
+  a {
+    color: #0000ee;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -1237,10 +1248,10 @@ aside {
   }
 
   .pub-list-img {
-    background-image: url(../images/aktuellt-1.jpg);
-    background-size: cover;
     float: none;
-    height: 200px;
+    height: 300px;
+    width: auto;
+    margin: 0 auto;
   }
 
   .pub-list-text {
@@ -1518,47 +1529,55 @@ input[type=submit]:hover {
 #om-oss section {
   width: 100%;
   max-width: 40rem;
- }
- #omoss-image {
+}
+
+#omoss-image {
   margin-bottom: 1rem;
   width: 100%;
+
   img {
     width: 100%;
   }
- }
+}
 
 /*** Om OSS ***/
 
 #om-oss section {
   width: 100%;
   max-width: 40rem;
- }
- #omoss-image {
+}
+
+#omoss-image {
   margin-bottom: 1rem;
   width: 100%;
+
   img {
     width: 100%;
   }
- }
- #om-oss-box {
+}
+
+#om-oss-box {
   position: relative;
   z-index: 1;
- }
- #om-oss-box>.newarrow {
+}
+
+#om-oss-box>.newarrow {
   position: absolute;
   z-index: 2;
   right: 20rem;
- }
- .omoss-video {
+}
+
+.omoss-video {
   max-width: 640;
   margin-bottom: 1rem 0 1rem 0;
   width: 100%;
   height: 360px;
- }
- @media screen and (max-width: 700px) {
+}
+
+@media screen and (max-width: 700px) {
   .om-ossvideo {
     height: 260px;
   }
- }
+}
 
- /*** OM OSS END ***/
+/*** OM OSS END ***/
